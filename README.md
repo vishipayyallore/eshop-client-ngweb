@@ -30,4 +30,5 @@ rm .\karma.conf.js .\src/test.ts [Windows]
 **Hint:** To get the commit `git log -1 --pretty=format:%h`
 > 4. We have to update `tsconfig.spec.json`, and `angular.json`. Please refer `0acfd7a`
 
-> 5. 
+> 5. We have created headless configuration file. Also tested with `npm run start` and `npm run start:local-dev`.
+
