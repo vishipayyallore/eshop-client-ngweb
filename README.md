@@ -32,3 +32,10 @@ rm .\karma.conf.js .\src/test.ts [Windows]
 
 > 5. We have created headless configuration file. Also tested with `npm run start` and `npm run start:local-dev`.
 
+> 6. We have created PATH Aliases.
+
+> 7. We have created eslint configuration file.
+
+```
+ng add @angular-eslint/schematics
+```

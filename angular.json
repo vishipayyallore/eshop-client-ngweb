@@ -124,9 +124,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "eshop-client-ngweb"
+  "defaultProject": "eshop-client-ngweb",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
