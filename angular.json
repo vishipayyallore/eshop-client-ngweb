@@ -63,6 +63,20 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.headless.ts"
+                }
+              ]
+            },
+            "local-dev": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
               "namedChunks": true
             }
           },
@@ -76,6 +90,9 @@
             },
             "development": {
               "browserTarget": "eshop-client-ngweb:build:development"
+            },
+            "local-dev": {
+              "browserTarget": "eshop-client-ngweb:build:local-dev"
             }
           },
           "defaultConfiguration": "development"

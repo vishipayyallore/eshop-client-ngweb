@@ -27,6 +27,7 @@ rm ./karma.conf.js ./src/test.ts [Mac & Ubuntu]
 rm .\karma.conf.js .\src/test.ts [Windows]
 ```
 
-> 4. We have to update `tsconfig.spec.json`, and `angular.json`
+**Hint:** To get the commit `git log -1 --pretty=format:%h`
+> 4. We have to update `tsconfig.spec.json`, and `angular.json`. Please refer `0acfd7a`
 
 > 5. 
