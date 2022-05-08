@@ -39,3 +39,20 @@ rm .\karma.conf.js .\src/test.ts [Windows]
 ```
 ng add @angular-eslint/schematics
 ```
+
+## 08-May-2022
+
+Note: 
+Add `"preinstall": "husky install"` to `package.json` under `scripts` section.
+
+```
+npm i -D husky
+node_modules/.bin/husky install
+node_modules/.bin/husky add .husky/precommit "npm test"
+node_modules/.bin/husky add .husky/pre-push "npm test"
+```
+
+```bash
+ng g m product
+ng g c product
+```
