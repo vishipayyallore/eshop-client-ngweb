@@ -11,9 +11,6 @@ export class AppComponent {
   title = 'eshop-client-ngweb';
   environment = environment;
 
-  @Input()
-  JustDemo: string = 'JustDemo';
-
 }
 
 console.log(environment);

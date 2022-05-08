@@ -51,3 +51,8 @@ node_modules/.bin/husky install
 node_modules/.bin/husky add .husky/precommit "npm test"
 node_modules/.bin/husky add .husky/pre-push "npm test"
 ```
+
+```bash
+ng g m product
+ng g c product
+```
