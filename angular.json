@@ -57,7 +57,7 @@
               ],
               "outputHashing": "all"
             },
-            "development": {
+            "local-dev": {
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
@@ -71,7 +71,7 @@
                 }
               ]
             },
-            "local-dev": {
+            "development": {
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
