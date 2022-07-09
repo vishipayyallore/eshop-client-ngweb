@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:authority": "nodemon authority.js",
+    "start:oauth-client": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "Robert Collins <roberto.tomas.cuentas@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "helmet": "^5.1.0",
+    "nodemon": "^2.0.19",
+    "oidc-provider": "^7.11.4",
+    "openid-client": "^5.1.8",
+    "passport": "^0.6.0"
+  }
+}

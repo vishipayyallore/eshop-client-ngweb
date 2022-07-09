@@ -2,13 +2,17 @@ import { AuthConfig } from 'angular-oauth2-oidc'
 
 export const authCodeFlowConfig: AuthConfig = {
   // Url of the Identity Provider
-  issuer: 'https://app-eshop-services-identity.azurewebsites.net',
+  //issuer: 'https://app-eshop-services-identity.azurewebsites.net',
+  issuer: 'http://localhost:3000/',
 
   // URL of the SPA to redirect the user to after login
   redirectUri: window.location.origin + '/signin-callback',
 
-  clientId: 'a1eRestaurant-web',
+  //clientId: 'a1eRestaurant-web',
+  clientId: 'oidcCLIENT',
   responseType: 'code',
+  
+  requestAccessToken: true,
 
   // set the scope for the permissions the client should request
   // The first four are defined by OIDC.

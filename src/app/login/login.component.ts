@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { OAuthService } from 'angular-oauth2-oidc';
-
-import { authCodeFlowConfig } from '../pkce.config';
+import { OidcSecurityService } from 'angular-auth-oidc-client'
 
 export enum Actions {
   unknown,
@@ -15,11 +13,7 @@ export enum Actions {
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constructor(private oauthService: OAuthService) { 
-    // once only:
-    this.oauthService.initLoginFlow() 
-    this.oauthService.configure(authCodeFlowConfig)
-  }
+  constructor(private oidcSecurityService: OidcSecurityService) { }
 
   cta(action: string) {
     switch (action) {
@@ -35,10 +29,10 @@ export class LoginComponent {
   }
 
   private login() {
-    this.oauthService.loadDiscoveryDocumentAndTryLogin()
+    this.oidcSecurityService.authorize()
   }
 
   private logout() {
-    this.oauthService.revokeTokenAndLogout()
+    this.oidcSecurityService.logoff()
   }
 }

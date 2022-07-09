@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { OAuthModule } from 'angular-oauth2-oidc';
+import { AuthModule } from 'angular-auth-oidc-client'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductModule } from './product/product.module';
-import { LoginModule } from './login/login.module';
+import { LoginModule } from './login/login.module'
+import { config as oidcConfig } from './oidc.config'
+
 
 @NgModule({
   declarations: [
@@ -16,9 +18,9 @@ import { LoginModule } from './login/login.module';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    OAuthModule.forRoot(),
-    ProductModule,
-    LoginModule
+    AuthModule.forRoot(oidcConfig),
+    LoginModule,
+    ProductModule
   ],
   providers: [],
   bootstrap: [AppComponent]
