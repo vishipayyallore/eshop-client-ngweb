@@ -8,4 +8,6 @@
 
 <span>{{environment | json}}</span>
 
+<app-login *ngIf="!isAuthenticated"></app-login>
+
 <router-outlet></router-outlet>

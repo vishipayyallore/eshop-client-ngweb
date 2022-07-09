@@ -7,7 +7,7 @@ import { environment } from '~/environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-
+  isAuthenticated = false;
   title = 'eshop-client-ngweb';
   environment = environment;
 
