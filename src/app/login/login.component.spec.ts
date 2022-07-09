@@ -1,4 +1,3 @@
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { OAuthService  } from 'angular-oauth2-oidc';
 
@@ -11,10 +10,7 @@ describe('LoginComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ LoginComponent ],
-      providers: [ { provide: OAuthService, useValue: { initLoginFlow() {}, configure(){}} } ],
-      schemas: [
-        NO_ERRORS_SCHEMA
-      ]
+      providers: [ { provide: OAuthService, useValue: { initLoginFlow() {}, configure(){}} } ]
     })
     .compileComponents();
   });
