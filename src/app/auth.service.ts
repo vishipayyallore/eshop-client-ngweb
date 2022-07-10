@@ -14,12 +14,26 @@ export class AuthService {
   isAuthenticated?: boolean
   userData: any
 
-  constructor(private oidcSecurityService: OidcSecurityService) {
-    this.oidcSecurityService.checkAuth().subscribe(this.onCheckAuthResponse.bind(this))
+  static forRoot() {
+    return { 
+      provide: AuthService, 
+      useFactory: (oidcSecurityService: OidcSecurityService) => {
+        const service = new AuthService(oidcSecurityService)
+        service.initialize()
+        return service
+      }, 
+      deps: [OidcSecurityService]}
   }
+
+  constructor(private oidcSecurityService: OidcSecurityService) { }
+
+  initialize() {
+    this.oidcSecurityService.checkAuth().subscribe(this.onCheckAuthResponse.bind(this))
+  }  
 
   @After(emitPropertyChanges('isAuthenticated', 'userData'))
   private onCheckAuthResponse ({ isAuthenticated, userData }: LoginResponse) {
+    console.log('onCheckAuthResponse')
     this.isAuthenticated = isAuthenticated
     this.userData = userData
   }

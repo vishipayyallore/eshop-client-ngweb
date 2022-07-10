@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ProductModule } from './product/product.module';
 import { LoginModule } from './login/login.module'
 import { config as oidcConfig } from './oidc.config'
+import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import { config as oidcConfig } from './oidc.config'
     LoginModule,
     ProductModule
   ],
-  providers: [],
+  providers: [
+    AuthService.forRoot()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

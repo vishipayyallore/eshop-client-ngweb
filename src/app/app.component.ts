@@ -20,7 +20,9 @@ export class AppComponent {
   constructor(
     private authService: AuthService,
     private cd: ChangeDetectorRef
-  ) {}
+  ) {
+    (window as any).component = this
+  }
 
   ngOnInit() {
     this.subscriptions.add(this.authService.state$
@@ -32,6 +34,7 @@ export class AppComponent {
   }
 
   private onAuthStateChange(state: Partial<AuthService>) {
+    console.log('onAuthStateChange')
     if('isAuthenticated' in state) {
       this.setProperty('isAuthenticated', state.isAuthenticated)
     }
@@ -39,7 +42,7 @@ export class AppComponent {
 
   @ChangeDetecting()
   private setProperty(property: keyof AppComponent, value: unknown) {
-    Object.assign(this, property, value)
+    Object.assign(this, {[property]: value})
   }
 }
 

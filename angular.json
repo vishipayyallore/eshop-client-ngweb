@@ -137,9 +137,10 @@
       }
     }
   },
-  "defaultProject": "eshop-client-ngweb",
   "cli": {
     "analytics": false,
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
