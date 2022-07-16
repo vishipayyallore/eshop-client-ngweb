@@ -17,12 +17,12 @@ const appEshopServicesIdentity: OpenIdConfiguration = {
   redirectUrl: window.location.origin + '/signin-callback',
   postLogoutRedirectUri: window.location.origin,
   clientId: 'a1eRestaurant-web',
-  scope: 'openid',
+  scope: 'openid profile',
   responseType: 'code',
   logLevel: LogLevel.Debug
 }
 
-export const config: PassedInitialConfig = { 
-  config:  localAuthority
-  //config:  appEshopServicesIdentity
+export const config: PassedInitialConfig = {
+  // config:  localAuthority
+  config: appEshopServicesIdentity
 }
