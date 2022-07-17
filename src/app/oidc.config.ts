@@ -15,14 +15,14 @@ const localAuthority: OpenIdConfiguration = {
 const appEshopServicesIdentity: OpenIdConfiguration = {
   authority: 'https://app-eshop-services-identity.azurewebsites.net',
   redirectUrl: window.location.origin + '/signin-callback',
-  postLogoutRedirectUri: window.location.origin,
+  postLogoutRedirectUri: window.location.origin + '/signout-callback',
   clientId: 'a1eRestaurant-web',
-  scope: 'openid',
+  scope: 'openid profile',
   responseType: 'code',
   logLevel: LogLevel.Debug
 }
 
-export const config: PassedInitialConfig = { 
-  config:  localAuthority
-  //config:  appEshopServicesIdentity
+export const config: PassedInitialConfig = {
+  // config:  localAuthority
+  config: appEshopServicesIdentity
 }

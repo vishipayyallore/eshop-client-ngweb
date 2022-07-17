@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { OidcSecurityService } from 'angular-auth-oidc-client'
 import { Subscription } from 'rxjs'
 
@@ -17,8 +17,8 @@ export enum Actions {
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
-  copy = { action: Actions.Login } 
+export class LoginComponent implements OnInit, OnDestroy {
+  copy = { action: Actions.Login }
   isAuthenticated?: boolean
 
   subscriptions = new Subscription();
@@ -40,8 +40,8 @@ export class LoginComponent {
 
   private onAuthStateChange(state: Partial<AuthService>) {
     console.log('onAuthStateChange')
-    if('isAuthenticated' in state) {
-      this.copy.action = state.isAuthenticated 
+    if ('isAuthenticated' in state) {
+      this.copy.action = state.isAuthenticated
         ? Actions.Logout
         : Actions.Login
       this.setProperty('isAuthenticated', state.isAuthenticated)
@@ -50,7 +50,7 @@ export class LoginComponent {
 
   @ChangeDetecting()
   private setProperty(property: keyof LoginComponent, value: unknown) {
-    Object.assign(this, {[property]: value})
+    Object.assign(this, { [property]: value })
   }
 
   cta(action: Actions) {
