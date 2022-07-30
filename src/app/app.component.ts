@@ -35,14 +35,14 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private onAuthStateChange(state: Partial<AuthService>) {
     console.log('onAuthStateChange')
-    if('isAuthenticated' in state) {
+    if ('isAuthenticated' in state) {
       this.setProperty('isAuthenticated', state.isAuthenticated)
     }
   }
 
   @ChangeDetecting()
   private setProperty(property: keyof AppComponent, value: unknown) {
-    Object.assign(this, {[property]: value})
+    Object.assign(this, { [property]: value })
   }
 }
 
