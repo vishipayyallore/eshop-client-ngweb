@@ -1,7 +1,7 @@
 import { LogLevel, OpenIdConfiguration, PassedInitialConfig } from "angular-auth-oidc-client"
 
 const localAuthority: OpenIdConfiguration = {
-  authority: 'http://localhost:3000',
+  authority: 'http://localhost:3000/oidc',
   redirectUrl: window.location.origin + '/signin-callback',
   postLogoutRedirectUri: window.location.origin,
   clientId: 'oidcCLIENT',

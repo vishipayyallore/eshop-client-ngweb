@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { environment } from '~/environments/environment';
-import { Dummyable } from '../common/utilities/dummyable.decorator';
+import { Dummyable } from '~common/utilities/dummyable.decorator';
 import { Product } from './product.interface';
 import { mockProduct } from './product.mock';
 
@@ -10,7 +11,6 @@ import { mockProduct } from './product.mock';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-
   @Input() product?: Product;
 
   constructor() { }
@@ -22,8 +22,7 @@ export class ProductComponent implements OnInit {
     }
   })
   ngOnInit(): void {
-
-    // TODO: Remove this
+    //  TODO - remove 18:3  error  Lifecycle methods should not be empty  @angular-eslint/no-empty-lifecycle-method
     true;
   }
 

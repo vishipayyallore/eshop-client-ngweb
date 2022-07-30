@@ -106,7 +106,7 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
-            "no-cache": true,
+            "cache": false,
             "polyfills": [
               "src/polyfills.ts"
             ],

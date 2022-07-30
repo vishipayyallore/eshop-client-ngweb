@@ -3,7 +3,7 @@ import { OidcSecurityService } from 'angular-auth-oidc-client'
 import { Subscription } from 'rxjs'
 
 import { AuthService } from '../auth.service'
-import { ChangeDetecting } from '../common/utilities/change-detecting.decorator'
+import { ChangeDetecting } from '~common/utilities/change-detecting.decorator'
 
 
 export enum Actions {
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   copy = { action: Actions.Login }
   isAuthenticated?: boolean
 
-  subscriptions = new Subscription();
+  private subscriptions = new Subscription();
 
   constructor(
     private authService: AuthService,
@@ -39,13 +39,19 @@ export class LoginComponent implements OnInit, OnDestroy {
   }
 
   private onAuthStateChange(state: Partial<AuthService>) {
-    console.log('onAuthStateChange')
     if ('isAuthenticated' in state) {
       this.copy.action = state.isAuthenticated
         ? Actions.Logout
         : Actions.Login
       this.setProperty('isAuthenticated', state.isAuthenticated)
     }
+  }
+
+  private onIsAuthenticatedStateChange(state: boolean) {
+    this.copy.action = state
+      ? Actions.Logout
+      : Actions.Login
+    this.setProperty('isAuthenticated', state)
   }
 
   @ChangeDetecting()

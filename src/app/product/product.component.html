@@ -1,7 +1,16 @@
-<h1>Product Name</h1>
-
-<p>{{product | json}}</p>
-
-
-
-
+<div class="product-component" *ngIf="product">
+  <div class="product-component__header">
+    <h1>{{ product.name }}</h1>
+  </div>
+  <div class="product-component__body">
+    <div class="product-component__image">
+      <img [src]="product.imageFile" alt="{{ product.name }}">
+    </div>
+    <div class="product-component__description">
+      <p>{{ product.description }}</p>
+    </div>
+    <div class="product-component__price">
+      <p>{{ product.price }}</p>
+    </div>
+  </div>
+</div>
