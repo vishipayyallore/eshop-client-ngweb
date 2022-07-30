@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { environment } from '~/environments/environment';
@@ -10,7 +10,7 @@ import { ChangeDetecting } from './common/utilities/change-detecting.decorator';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   title = 'eshop-client-ngweb';
   environment = environment;
