@@ -1,17 +1,14 @@
 import type { Environments } from "./environments.enum"
-import type { JSONValue } from "~common/utilities/json.interface"
+import { Endpoint } from "~common/services/endpoint/endpoint.interface"
 
 
-export type Config = BaseConfig & ExtendedConfig
-
-export interface ExtendedConfig {
+export interface Config extends BaseConfig {
   env: Environments
 }
 
-export type BaseConfig = Configuration & {  [key: string]: JSONValue | Array<JSONValue>}
-
-export interface Configuration {
+export interface BaseConfig {
   appName: string
   apiHost: string
-  endpoints: Array<{[key: string]: JSONValue | Array<JSONValue>}>
+  cdnHost: string
+  endpoints: Array<Endpoint>
 }

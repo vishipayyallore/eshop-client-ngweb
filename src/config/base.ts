@@ -1,5 +1,6 @@
-import { HTTPRequestType } from "~/app/common/services/http-request-type.enum"
+import { HTTPRequestType } from "~common/services/endpoint/http-request-type"
 import { BaseConfig } from "./config.interface"
+import { Endpoints } from "./endpoints"
 
 
 export const config: BaseConfig = {
@@ -8,10 +9,10 @@ export const config: BaseConfig = {
   cdnHost: 'http://eshopcdn.eastus.azurecontainer.io',
   endpoints: [
     {
-      name: 'products',
+      name: Endpoints.Products,
       type: HTTPRequestType.GET,
       url: '/api/v1/products',
-      description: 'Retrieves all the products. Expensive call ;)'
+      description: 'Retrieves all the products. Expensive call )'
     },
   ]
 }

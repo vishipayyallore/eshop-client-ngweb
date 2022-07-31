@@ -1,8 +1,8 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core'
 import { OidcSecurityService } from 'angular-auth-oidc-client'
 import { Subscription } from 'rxjs'
 
-import { AuthService } from '../auth.service'
+import { AuthService } from '~common/services/auth/auth.service'
 import { ChangeDetecting } from '~common/utilities/change-detecting.decorator'
 
 
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   copy = { action: Actions.Login }
   isAuthenticated?: boolean
 
-  private subscriptions = new Subscription();
+  private subscriptions = new Subscription()
 
   constructor(
     private authService: AuthService,
