@@ -1,6 +1,9 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core'
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core'
+import { Subscription } from 'rxjs'
 
+import { environment } from '~/environments/environment'
 import { ChangeDetecting } from '~common/utilities/change-detecting.decorator'
+import { LogMethods } from '~common/utilities/log-methods.decorator'
 import { Product } from './product.interface'
 import { ProductsService } from './products.service'
 
@@ -10,7 +13,9 @@ import { ProductsService } from './products.service'
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit {
+@LogMethods({ when: !environment.production })
+export class ProductsComponent implements OnInit, OnDestroy {
+  subscriptions = new Subscription()
   products: Array<Product> = []
 
   constructor(
@@ -19,9 +24,18 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.productsService.getProducts().subscribe(products => {
-      this.updateProducts(products)
-    })
+    this.productsService.getProducts()
+    this.subscriptions.add(
+      this.productsService.state$.subscribe(this.onProductsChange.bind(this))
+    )
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe()
+  }
+
+  private onProductsChange(state: Partial<ProductsService>) {
+    if(Array.isArray(state.products)) this.updateProducts(state.products)
   }
 
   @ChangeDetecting()

@@ -1,9 +1,9 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core'
+import { Subscription } from 'rxjs'
 
-import { environment } from '~/environments/environment';
-import { AuthService } from './auth.service';
-import { ChangeDetecting } from './common/utilities/change-detecting.decorator';
+import { environment } from '~/environments/environment'
+import { AuthService } from '~common/services/auth/auth.service'
+import { ChangeDetecting } from './common/utilities/change-detecting.decorator'
 
 @Component({
   selector: 'app-root',
@@ -11,18 +11,16 @@ import { ChangeDetecting } from './common/utilities/change-detecting.decorator';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  isAuthenticated = false;
-  title = 'eshop-client-ngweb';
-  environment = environment;
+  isAuthenticated = false
+  title = 'eshop-client-ngweb'
+  environment = environment
 
-  subscriptions = new Subscription();
+  subscriptions = new Subscription()
 
   constructor(
     private authService: AuthService,
     private cd: ChangeDetectorRef
-  ) {
-    (window as any).component = this
-  }
+  ) {  }
 
   ngOnInit() {
     this.subscriptions.add(this.authService.state$
@@ -34,7 +32,6 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private onAuthStateChange(state: Partial<AuthService>) {
-    console.log('onAuthStateChange')
     if ('isAuthenticated' in state) {
       this.setProperty('isAuthenticated', state.isAuthenticated)
     }

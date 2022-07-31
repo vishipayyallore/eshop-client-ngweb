@@ -3,10 +3,10 @@ export type JSONValue =
     | number
     | boolean
     | JSONObject
-    | JSONArray;
+    | JSONArray
 
 export interface JSONObject {
-    [x: string]: JSONValue;
+    [x: string]: JSONValue
 }
 
 export interface JSONArray extends Array<JSONValue> { }
