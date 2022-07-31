@@ -20,9 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(
     private authService: AuthService,
     private cd: ChangeDetectorRef
-  ) {
-    (window as any).component = this
-  }
+  ) {  }
 
   ngOnInit() {
     this.subscriptions.add(this.authService.state$

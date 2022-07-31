@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core'
+import { Subscription } from 'rxjs'
 
 import { ChangeDetecting } from '~common/utilities/change-detecting.decorator'
 import { Product } from './product.interface'
@@ -11,6 +12,7 @@ import { ProductsService } from './products.service'
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+  subscriptions = new Subscription()
   products: Array<Product> = []
 
   constructor(
@@ -19,9 +21,13 @@ export class ProductsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.productsService.getProducts().subscribe(products => {
-      this.updateProducts(products)
-    })
+    this.subscriptions.add(
+      this.productsService.getProducts().subscribe(this.updateProducts.bind(this))
+    )
+  }
+
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe()
   }
 
   @ChangeDetecting()

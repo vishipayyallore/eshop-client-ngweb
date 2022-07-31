@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { config } from '~/config';
 import { EndpointState } from './endpointstate.interface';
 
@@ -18,11 +18,12 @@ export class EndpointService {
 
     const url = `${config.apiHost}${endpoint}`
     
-    this.endpoints[endpoint] = {} as EndpointState
-    this.endpoints[endpoint].response = new Subject()
-    this.endpoints[endpoint].subscription = this.httpClient.get(url).subscribe(data => {
+    const subscription = this.httpClient.get(url).subscribe(data => {
       this.endpoints[endpoint].response.next(data)
     })
-    return this.endpoints[endpoint].response
+    const response = new BehaviorSubject(this.endpoints[endpoint].initialValue ?? {})
+    this.endpoints[endpoint] = { response, subscription}
+
+    return response
   }
 }
