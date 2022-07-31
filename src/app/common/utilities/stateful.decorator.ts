@@ -27,16 +27,12 @@ export interface Stateful<T> {
 export function Stateful<T>(): ClassDecorator {
   // because of the generic, we must use the parameterized form of the decorator
   return function <TFunction extends StrictConstructor>(target: TFunction) {
-    return class extends target implements StatefulObservable {
-      private state: ReplaySubject<T>
-      public state$: Observable<T>
-
-      constructor(...args: any[]) {
-        super(...args)
-        this.state = new ReplaySubject<T>()
-        this.state$ = this.state.asObservable()
-      }
-    }
+    const state = {value: new ReplaySubject<T>()}
+    Object.defineProperties(target.prototype, {
+      state,
+      state$: {value: state.value.asObservable()}
+    })
+    return target
   } as ClassDecorator
 }
 
