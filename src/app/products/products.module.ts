@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common'
 import { ProductModule } from '~/app/product/product.module'
 import { ProductsComponent } from './products.component'
 import { ProductsRoutingModule } from './products-routing.module'
+import { Endpoints } from '~/config/endpoints'
+import { AppConfigurationService } from '~common/services/app-configuration/app-configuration.service'
 
 
 @NgModule({
@@ -19,4 +21,8 @@ import { ProductsRoutingModule } from './products-routing.module'
     ProductModule
   ]
 })
-export class ProductsModule { }
+export class ProductsModule {
+  constructor(private appConfig: AppConfigurationService) {
+    this.appConfig.getConfiguration(Endpoints.ProductsConfiguration)
+  }
+}

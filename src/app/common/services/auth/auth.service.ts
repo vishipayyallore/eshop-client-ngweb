@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core'
 import { LoginResponse, OidcSecurityService } from 'angular-auth-oidc-client'
 
 import { After } from '~common/utilities/after.decorator'
-import { emitPropertyChanges, Stateful } from '~common/utilities/stateful.decorator'
+import { 
+  emitPropertyChanges, Stateful 
+} from '~common/utilities/stateful.decorator'
 
 export interface AuthService extends Stateful<Partial<AuthService>> {}
 
@@ -28,7 +30,8 @@ export class AuthService {
   constructor(private oidcSecurityService: OidcSecurityService) { }
 
   initialize() {
-    this.oidcSecurityService.checkAuth().subscribe(this.onCheckAuthResponse.bind(this))
+    this.oidcSecurityService.checkAuth()
+      .subscribe(this.onCheckAuthResponse.bind(this))
   }  
 
   @After(emitPropertyChanges('isAuthenticated', 'userData'))

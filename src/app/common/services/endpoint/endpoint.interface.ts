@@ -11,5 +11,6 @@ export interface Endpoint {
   factroyQueryParams?: ((partial:{ [key: string]: string }) => { [key: string]: string })
   factoryBody?: ((partial:JSONValue) => JSONValue)
   value?: JSONValue
+  meta?: JSONValue
   description?: string
 }

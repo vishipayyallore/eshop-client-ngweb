@@ -143,7 +143,9 @@ export class EndpointService {
   }
 
   private factoryUrl(url: string) {
-      return config.apiHost + url
+      return /^https?:\/{2}/.test(url) 
+        ? url
+        : config.apiHost + url
   }
 
   private factoryOptions(

@@ -1,9 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core'
 
+import { defaultImageFile } from './constants'
 import { environment } from '~/environments/environment'
 import { Dummyable } from '~common/utilities/dummyable.decorator'
 import { Product } from './product.interface'
 import { mockProduct } from './product.mock'
+
 
 @Component({
   selector: 'app-product',
@@ -11,6 +13,8 @@ import { mockProduct } from './product.mock'
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
+  defaultImageFile = defaultImageFile
+
   @Input() product?: Product
 
   constructor() { }

@@ -2,5 +2,7 @@
 
 export enum Endpoints {
   unknown,
-  Products = 'products'
+  Products = 'products',
+  Configuration = 'configuration',
+  ProductsConfiguration = 'products-configuration',
 }

@@ -10,9 +10,10 @@ export class CdnPipe implements PipeTransform {
 
   constructor(private cdnService: CdnService) {}
 
-
-  transform(value: string, ...args: unknown[]): string {
-    return this.cdnService.cdnHost + value
+  transform(value: string, serviceRequest: string, folder?: string): string {
+    const service = this.cdnService.urlByService(serviceRequest)
+    const path = folder ? service.configuration[folder] : service.configuration
+    return `${service.host}/${path}/${value}`
   }
 
 }

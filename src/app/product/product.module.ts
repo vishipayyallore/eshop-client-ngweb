@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
 import { ProductComponent } from './product.component'
-import { CommonPipesModule } from '~common/pipes/common-pipes/common-pipes.module'
+import { CdnModule } from '../common/pipes/cdn/cdn.module'
+import { FallbackImageModule } from '../common/directives/fallback-image/fallback-image.module'
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { CommonPipesModule } from '~common/pipes/common-pipes/common-pipes.modul
   ],
   imports: [
     CommonModule,
-    CommonPipesModule
+    CdnModule,
+    FallbackImageModule
   ]
 })
 export class ProductModule { }

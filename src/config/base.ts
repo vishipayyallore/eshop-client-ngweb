@@ -6,8 +6,21 @@ import { Endpoints } from "./endpoints"
 export const config: BaseConfig = {
   appName: 'eshop-admin-ngweb',
   apiHost: 'https://productsapiv1.eastus.azurecontainer.io',
-  cdnHost: 'https://stforeshop.blob.core.windows.net/productsimages/',
   endpoints: [
+    {
+      name: Endpoints.Configuration,
+      type: HTTPRequestType.GET,
+      url: 'https://func-configuration.azurewebsites.net/api/get-configuration',
+      description: 'Get the global app configuration'
+    },
+    {
+      name: Endpoints.ProductsConfiguration,
+      type: HTTPRequestType.GET,
+      url: 'https://func-configuration.azurewebsites.net/api/get-configuration',
+      description: 'Get the global app configuration',
+      meta: { configuration: { serviceName: 'products' }},
+      factroyQueryParams: _partial => ({ products: 'true'})
+    },
     {
       name: Endpoints.Products,
       type: HTTPRequestType.GET,
