@@ -1,1 +1,3 @@
-<button (click)="cta(copy.action)">{{copy.action}}</button>
+<ng-container *ngIf="action$|async as action">
+  <button (click)="cta(action)">{{ action }}</button>
+</ng-container>

@@ -1,9 +1,10 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 import { TestBed } from '@angular/core/testing'
 import { RouterTestingModule } from '@angular/router/testing'
+import { of } from 'rxjs'
 import { AppComponent } from './app.component'
 import { AuthService } from './common/services/auth/auth.service'
-import { statefulMock } from './common/utilities/stateful.mock'
+
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -12,7 +13,7 @@ describe('AppComponent', () => {
         RouterTestingModule,
       ],
       providers: [
-        { provide: AuthService, useValue: statefulMock() },
+        { provide: AuthService, useValue: { loginResponse$: of() } },
       ],
       declarations: [
         AppComponent

@@ -1,13 +1,13 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core'
-import { Subscription } from 'rxjs/internal/Subscription'
-import { first /*, delay */ } from 'rxjs/operators'
+import { Component, OnInit } from '@angular/core'
+import { Observable } from 'rxjs/internal/Observable'
+import { first, map /*, delay */ } from 'rxjs/operators'
 
 import { environment } from '~/environments/environment'
-import { ChangeDetecting } from '~common/utilities/change-detecting.decorator'
 import { LogMethods } from '~common/utilities/log-methods.decorator'
 import { AppConfigurationService } from '~common/services/app-configuration/app-configuration.service'
 import { Product } from './product.interface'
 import { ProductsService } from './products.service'
+import { Endpoints } from '~/config/endpoints'
 
 
 @Component({
@@ -16,45 +16,24 @@ import { ProductsService } from './products.service'
   styleUrls: ['./products.component.scss']
 })
 @LogMethods({ when: !environment.production })
-export class ProductsComponent implements OnInit, OnDestroy {
-  subscriptions = new Subscription()
-  products: Array<Product> = []
-  hasProductsConfig?: boolean
+export class ProductsComponent implements OnInit {
+  products$!: Observable<Array<Product>>
+  hasProductsConfig$?: Observable<boolean>
+  private productServiceName = this.appConfigService
+    .endpoints[Endpoints.ProductsConfiguration].meta?.configuration?.serviceName
 
   constructor(
-    private cd: ChangeDetectorRef,
     private productsService: ProductsService,
     private appConfigService: AppConfigurationService
   ) { }
 
   ngOnInit(): void {
     this.productsService.getProducts()
-    this.subscriptions.add(
-      this.productsService.state$.subscribe(this.onProductsChange.bind(this))
-    )
-    this.appConfigService.state$
-      .pipe(
-        first(state => 'products' in state.configuration) /*, 
-        delay(4000) */)
-      .subscribe(_state => this.toggleHasProductsConfig(true))
-  }
+    this.products$ = this.productsService.products$
 
-  ngOnDestroy(): void {
-    this.subscriptions.unsubscribe()
-  }
-
-  private onProductsChange(state: Partial<ProductsService>) {
-    if(Array.isArray(state.products)) this.updateProducts(state.products)
-  }
-
-  @ChangeDetecting()
-  private updateProducts(products: Array<Product>) {
-    this.products = products
-  }
-
-  @ChangeDetecting()
-  private toggleHasProductsConfig(value = !this.hasProductsConfig) {
-    this.hasProductsConfig = value
+    this.hasProductsConfig$ = this.appConfigService.state$.pipe(
+      first(state => this.productServiceName in state.configuration),
+      map(_state => true) /*, delay(4000) */)
   }
 
 }

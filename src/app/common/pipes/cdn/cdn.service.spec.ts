@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { AppConfigurationService } from '../../services/app-configuration/app-configuration.service';
+import { AppConfigurationService } from '~common/services/app-configuration/app-configuration.service';
 
 import { CdnService } from './cdn.service';
 

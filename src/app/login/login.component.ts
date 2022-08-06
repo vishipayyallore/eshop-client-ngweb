@@ -1,9 +1,8 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core'
-import { OidcSecurityService } from 'angular-auth-oidc-client'
-import { Subscription } from 'rxjs'
+import { Component, OnInit } from '@angular/core'
+import { LoginResponse, OidcSecurityService } from 'angular-auth-oidc-client'
+import { map, startWith, Observable } from 'rxjs'
 
 import { AuthService } from '~common/services/auth/auth.service'
-import { ChangeDetecting } from '~common/utilities/change-detecting.decorator'
 
 
 export enum Actions {
@@ -17,46 +16,20 @@ export enum Actions {
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit, OnDestroy {
-  copy = { action: Actions.Login }
-  isAuthenticated?: boolean
-
-  private subscriptions = new Subscription()
-
+export class LoginComponent implements OnInit {
+  action$!: Observable<Actions>
+  
   constructor(
     private authService: AuthService,
-    private cd: ChangeDetectorRef,
     private oidcSecurityService: OidcSecurityService
   ) { }
 
   ngOnInit() {
-    this.subscriptions.add(this.authService.state$
-      .subscribe(this.onAuthStateChange.bind(this)))
-  }
-
-  ngOnDestroy() {
-    this.subscriptions.unsubscribe()
-  }
-
-  private onAuthStateChange(state: Partial<AuthService>) {
-    if ('isAuthenticated' in state) {
-      this.copy.action = state.isAuthenticated
-        ? Actions.Logout
-        : Actions.Login
-      this.setProperty('isAuthenticated', state.isAuthenticated)
-    }
-  }
-
-  private onIsAuthenticatedStateChange(state: boolean) {
-    this.copy.action = state
-      ? Actions.Logout
-      : Actions.Login
-    this.setProperty('isAuthenticated', state)
-  }
-
-  @ChangeDetecting()
-  private setProperty(property: keyof LoginComponent, value: unknown) {
-    Object.assign(this, { [property]: value })
+    this.action$ = this.authService.loginResponse$.pipe(
+      map((loginResponse: LoginResponse) => loginResponse.isAuthenticated 
+        ? Actions.Logout 
+        : Actions.Login),
+      startWith(Actions.Login))
   }
 
   cta(action: Actions) {

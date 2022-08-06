@@ -1,10 +1,10 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core'
-import { Subscription } from 'rxjs'
+import { Component, OnInit } from '@angular/core'
+import { map, Observable, shareReplay, Subscription } from 'rxjs'
 
 import { environment } from '~/environments/environment'
 import { AuthService } from '~common/services/auth/auth.service'
-import { ChangeDetecting } from '~common/utilities/change-detecting.decorator'
-import { LogMethods } from './common/utilities/log-methods.decorator'
+import { LogMethods } from '~common/utilities/log-methods.decorator'
+import { LoginResponse } from 'angular-auth-oidc-client/lib/login/login-response'
 
 
 @Component({
@@ -13,37 +13,20 @@ import { LogMethods } from './common/utilities/log-methods.decorator'
   styleUrls: ['./app.component.scss']
 })
 @LogMethods({when: !environment.production})
-export class AppComponent implements OnInit, OnDestroy {
-  isAuthenticated = false
+export class AppComponent implements OnInit {
   title = 'eshop-client-ngweb'
   environment = environment
+  isAuthenticated$?: Observable<boolean>
 
   subscriptions = new Subscription()
 
-  constructor(
-    private authService: AuthService,
-    private cd: ChangeDetectorRef,
-  ) {  }
+  constructor(private authService: AuthService) {  }
 
   ngOnInit() {
-    this.subscriptions.add(this.authService.state$
-      .subscribe(this.onAuthStateChange.bind(this)))
+    this.isAuthenticated$ = this.authService.loginResponse$.pipe(
+      map((loginResponse: LoginResponse) => loginResponse.isAuthenticated))
   }
 
-  ngOnDestroy() {
-    this.subscriptions.unsubscribe()
-  }
-
-  private onAuthStateChange(state: Partial<AuthService>) {
-    if ('isAuthenticated' in state) {
-      this.setProperty('isAuthenticated', state.isAuthenticated)
-    }
-  }
-
-  @ChangeDetecting()
-  private setProperty(property: keyof AppComponent, value: unknown) {
-    Object.assign(this, { [property]: value })
-  }
 }
 
 console.log(environment)

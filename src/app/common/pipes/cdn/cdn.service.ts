@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core'
 
-import { AppConfigurationService } from '~common/services/app-configuration/app-configuration.service'
+import { 
+  AppConfigurationService 
+} from '~common/services/app-configuration/app-configuration.service'
 
 
 @Injectable({
