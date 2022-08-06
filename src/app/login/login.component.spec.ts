@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { OidcSecurityService } from 'angular-auth-oidc-client'
 import { of } from 'rxjs'
-import { AuthService } from '../common/services/auth/auth.service'
+import { AuthService } from '~common/services/auth/auth.service'
 
 import { LoginComponent } from './login.component'
 
