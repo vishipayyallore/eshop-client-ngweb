@@ -5,6 +5,7 @@ import { shareReplay } from 'rxjs'
 import { config } from '~config'
 import { factoryEndpoint } from './factory-endpoint'
 import { EndpointHTTPArguments } from './endpoint-http-arguments.interface'
+import { environment } from '~/environments/environment'
 //import { LogMethods } from '~common/utilities/log-methods.decorator'
 
 
@@ -18,9 +19,7 @@ export class EndpointService {
 
   constructor(private httpClient: HttpClient) { }
 
-  clearEndpointValue(endpoint: string) {
-    console.warn(`[EndpointService] clearing endpoint value for endpoint "${
-      endpoint}"`)
+  clearEndpointValue(endpoint: string) { 
     if(!this.endpoints[endpoint]) {
       throw new Error(`[EndpointService] Endpoint "${endpoint}" not found`)
     }

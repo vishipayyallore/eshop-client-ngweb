@@ -4,7 +4,7 @@
   </div>
   <div class="product-component__body">
     <div class="product-component__image">
-      <img [src]="product.imageFile" alt="{{ product.name }}">
+      <img class=product-image [src]="product.imageFile | cdn" alt="{{ product.name }}">
     </div>
     <div class="product-component__description">
       <p>{{ product.description }}</p>

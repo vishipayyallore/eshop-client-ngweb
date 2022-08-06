@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 import { of } from 'rxjs'
-import { statefulMock } from '../common/utilities/stateful.mock'
 
+import { statefulMock } from '~common/utilities/stateful.mock'
 import { ProductsComponent } from './products.component'
 import { ProductsService } from './products.service'
 
