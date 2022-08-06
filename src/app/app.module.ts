@@ -8,12 +8,13 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { ProductModule } from './product/product.module'
 import { LoginModule } from './login/login.module'
-import { config as oidcConfig } from './oidc.config'
+import { config as oidcConfig } from './oidc.config';
+import { CommonPipesModule } from './common/pipes/common-pipes/common-pipes.module'
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent  
   ],
   imports: [
     BrowserModule,
@@ -21,7 +22,8 @@ import { config as oidcConfig } from './oidc.config'
     HttpClientModule,
     AuthModule.forRoot(oidcConfig),
     LoginModule,
-    ProductModule
+    ProductModule,
+    CommonPipesModule
   ],
   providers: [
     AuthService.forRoot()
