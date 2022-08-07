@@ -35,5 +35,4 @@ export class ProductsComponent implements OnInit {
       first(state => this.productServiceName in state.configuration),
       map(_state => true) /*, delay(4000) */)
   }
-
 }
