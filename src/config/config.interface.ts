@@ -9,6 +9,5 @@ export interface Config extends BaseConfig {
 export interface BaseConfig {
   appName: string
   apiHost: string
-  cdnHost: string
   endpoints: Array<Endpoint>
 }

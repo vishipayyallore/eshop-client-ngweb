@@ -1,5 +1,7 @@
 <ul class="products component routable">
-  <li *ngFor="let product of products">
-    <app-product [product]="product"></app-product>
-  </li>
+  <ng-container *ngIf="hasProductsConfig">
+    <li *ngFor="let product of products">
+      <app-product [product]="product"></app-product>
+    </li>
+  </ng-container>
 </ul>
