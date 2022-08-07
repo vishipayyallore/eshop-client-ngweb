@@ -5,14 +5,14 @@ import { shareReplay } from 'rxjs'
 import { config } from '~config'
 import { factoryEndpoint } from './factory-endpoint'
 import { EndpointHTTPArguments } from './endpoint-http-arguments.interface'
-import { environment } from '~/environments/environment'
+// import { environment } from '~/environments/environment'
 //import { LogMethods } from '~common/utilities/log-methods.decorator'
 
 
 @Injectable({
   providedIn: 'root'
 })
-//@LogMethods()
+//@LogMethods({ when: !environment.production })
 export class EndpointService {
   headers = {}
   endpoints = Object.fromEntries(config.endpoints.map(factoryEndpoint))
@@ -41,7 +41,7 @@ export class EndpointService {
       const headers = this.endpoints[endpoint].factoryHeaders(additionalHeaders)
       const queryParams = this.endpoints[endpoint]
         .factoryQueryParams(additionalQueryParams)
-        this.endpoints[endpoint].value = this.httpClient
+      this.endpoints[endpoint].value = this.httpClient
         .get<T>(url, this.factoryOptions({headers, queryParams}))
         .pipe(shareReplay(1))
 
@@ -148,22 +148,17 @@ export class EndpointService {
         : config.apiHost + url
   }
 
-  private factoryOptions(
-    { 
-    headers, 
-    queryParams,
-    observe 
-    }: 
-    { 
-    headers: { [key: string]: string }, 
-    queryParams: { [key: string]: string }, 
-    observe?: any
-    }
-  ) {
+  private factoryOptions({ headers, queryParams, observe }: OptionsConfig) {
     return {
       headers: {...this.headers, ...headers},
       params: queryParams,
       observe
     }
   }
+}
+
+type OptionsConfig = { 
+  headers: { [key: string]: string }, 
+  queryParams: { [key: string]: string }, 
+  observe?: any
 }

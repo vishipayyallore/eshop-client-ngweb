@@ -7,8 +7,10 @@ export interface Endpoint {
   name: Endpoints
   type: HTTPRequestType
   url: string | ((...args:any[]) => string)
-  factoryHeaders?: ((partial:{ [key: string]: string }) => { [key: string]: string })
-  factroyQueryParams?: ((partial:{ [key: string]: string }) => { [key: string]: string })
+  factoryHeaders?: 
+    ((partial:{ [key: string]: string }) => { [key: string]: string })
+  factroyQueryParams?: 
+    ((partial:{ [key: string]: string }) => { [key: string]: string })
   factoryBody?: ((partial:JSONValue) => JSONValue)
   value?: JSONValue
   meta?: JSONValue

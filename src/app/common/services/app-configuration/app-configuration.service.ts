@@ -6,7 +6,9 @@ import { config } from '~/config'
 import { Endpoints } from '~/config/endpoints'
 import { factoryEndpoint } from '~common/services/endpoint/factory-endpoint'
 import { After } from '~common/utilities/after.decorator'
-import { emitPropertyChange, Stateful } from '~common/utilities/stateful.decorator'
+import { 
+  emitPropertyChange, Stateful 
+} from '~common/utilities/stateful.decorator'
 
 
 export interface AppConfigurationService 
@@ -17,7 +19,7 @@ export interface AppConfigurationService
 })
 @Stateful<Partial<AppConfigurationService>>()
 export class AppConfigurationService {
-  private endpoints = Object.fromEntries(config.endpoints.map(factoryEndpoint))
+  endpoints = Object.fromEntries(config.endpoints.map(factoryEndpoint))
   configuration: any
 
   constructor(private httpClient: HttpClient) { }
@@ -38,7 +40,7 @@ export class AppConfigurationService {
   async initialize() {
     const url = this.endpoints[Endpoints.Configuration].url
     this.configuration = await firstValueFrom(this.httpClient.get(url))
-    console.log('[AppConfigurationService] got configuration', this.configuration)
+    console.log('[AppConfigurationService] configuration', this.configuration)
   }
 
   async getConfiguration(service: Endpoints) {
@@ -51,7 +53,8 @@ export class AppConfigurationService {
 
     const serviceName = this.endpoints[service].meta?.configuration?.serviceName
     if(!serviceName) {
-      console.warn('[AppConfigurationService] no service name in Endpoint metadata for', service)
+      console.warn('[AppConfigurationService]'
+        +' no serviceName in Endpoint meta (metadata) for', service)
       return
     }
     this.setConfiguration(

@@ -1,18 +1,13 @@
 import { Injectable } from '@angular/core'
 import { LoginResponse, OidcSecurityService } from 'angular-auth-oidc-client'
+import { Observable, shareReplay } from 'rxjs'
 
-import { After } from '~common/utilities/after.decorator'
-import { 
-  emitPropertyChanges, Stateful 
-} from '~common/utilities/stateful.decorator'
-
-export interface AuthService extends Stateful<Partial<AuthService>> {}
 
 @Injectable({
   providedIn: 'root'
 })
-@Stateful<Partial<AuthService>>()
 export class AuthService {
+  loginResponse$!: Observable<LoginResponse>
   isAuthenticated?: boolean
   userData: any
 
@@ -30,13 +25,8 @@ export class AuthService {
   constructor(private oidcSecurityService: OidcSecurityService) { }
 
   initialize() {
-    this.oidcSecurityService.checkAuth()
-      .subscribe(this.onCheckAuthResponse.bind(this))
+    this.loginResponse$ = this.oidcSecurityService.checkAuth()
+      .pipe(shareReplay(1))
   }  
 
-  @After(emitPropertyChanges('isAuthenticated', 'userData'))
-  private onCheckAuthResponse ({ isAuthenticated, userData }: LoginResponse) {
-    this.isAuthenticated = isAuthenticated
-    this.userData = userData
-  }
 }
