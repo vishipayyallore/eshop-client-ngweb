@@ -23,7 +23,7 @@ const appEshopLocalServicesIdentity: OpenIdConfiguration = {
 }
 
 
-// key = Math.max(Object.keys(sessionStorage).filter(k => /eShop-webclientId/.test(k)).map(i => i.split('-', 2)[-1])) + '-eShop-webclientid'
+// key = Math.max(Object.keys(sessionStorage).filter(k => /eShop-webclientId/.test(k)).map(i => i.split('-', 2)[-1])) + '-eShop-webclientId'
 const appEshopServicesIdentity: OpenIdConfiguration = {
   authority: 'https://app-eshop-services-identity.azurewebsites.net',
   redirectUrl: window.location.origin + '/signin-callback',
