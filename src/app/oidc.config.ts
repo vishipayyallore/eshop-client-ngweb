@@ -35,6 +35,6 @@ const appEshopServicesIdentity: OpenIdConfiguration = {
 
 export const config: PassedInitialConfig = {
   // config:  localAuthority
-  // config: appEshopServicesIdentity,
-  config: appEshopLocalServicesIdentity
+  config: appEshopServicesIdentity,
+  // config: appEshopLocalServicesIdentity
 }
