@@ -22,7 +22,6 @@ const appEshopLocalServicesIdentity: OpenIdConfiguration = {
   logLevel: LogLevel.Debug
 }
 
-
 // key = Math.max(Object.keys(sessionStorage).filter(k => /eShop-webclientId/.test(k)).map(i => i.split('-', 2)[-1])) + '-eShop-webclientId'
 const appEshopServicesIdentity: OpenIdConfiguration = {
   authority: 'https://app-eshop-services-identity.azurewebsites.net',
@@ -36,6 +35,6 @@ const appEshopServicesIdentity: OpenIdConfiguration = {
 
 export const config: PassedInitialConfig = {
   // config:  localAuthority
-  config: appEshopServicesIdentity,
-  // config: appEshopLocalServicesIdentity
+  // config: appEshopServicesIdentity,
+  config: appEshopLocalServicesIdentity
 }
