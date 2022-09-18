@@ -8,6 +8,6 @@ export interface Config extends BaseConfig {
 
 export interface BaseConfig {
   appName: string
-  apiHost: string
+  apiHost?: string
   endpoints: Array<Endpoint>
 }
