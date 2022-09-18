@@ -3,13 +3,10 @@ import { LoginResponse, OidcSecurityService } from 'angular-auth-oidc-client'
 import { map, startWith, Observable } from 'rxjs'
 
 import { AuthService } from '~common/services/auth/auth.service'
+import { Dummyable } from '~common/utilities/dummyable.decorator'
+import { Actions } from './actions.enum'
+import { developmentSetupAction, developmentToggleSignIn } from './helpers'
 
-
-export enum Actions {
-  unknown,
-  Login = 'login',
-  Logout = 'logout'
-}
 
 @Component({
   selector: 'app-login',
@@ -24,6 +21,7 @@ export class LoginComponent implements OnInit {
     private oidcSecurityService: OidcSecurityService
   ) { }
 
+  @Dummyable(developmentSetupAction)
   ngOnInit() {
     this.action$ = this.authService.loginResponse$.pipe(
       map((loginResponse: LoginResponse) => loginResponse.isAuthenticated 
@@ -45,10 +43,12 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  @Dummyable(developmentToggleSignIn)
   private login() {
     this.oidcSecurityService.authorize()
   }
 
+  @Dummyable(developmentToggleSignIn)
   private logout() {
     this.oidcSecurityService.logoff()
   }

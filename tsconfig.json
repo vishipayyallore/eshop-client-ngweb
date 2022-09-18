@@ -18,7 +18,7 @@
       ],
       "~common/*": [
         "src/app/common/*"
-      ],
+      ]
     },
     "outDir": "./dist/eshop-client-ngweb",
     "forceConsistentCasingInFileNames": true,

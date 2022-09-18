@@ -5,4 +5,5 @@ export enum Endpoints {
   Products = 'products',
   Configuration = 'configuration',
   ProductsConfiguration = 'products-configuration',
+  IdentityConfiguration = 'identity-configuration',
 }

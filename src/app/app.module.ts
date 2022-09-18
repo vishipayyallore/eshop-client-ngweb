@@ -9,7 +9,6 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { ProductModule } from './product/product.module'
 import { LoginModule } from './login/login.module'
-import { config as oidcConfig } from './oidc.config';
 
 
 @NgModule({
@@ -20,7 +19,7 @@ import { config as oidcConfig } from './oidc.config';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AuthModule.forRoot(oidcConfig),
+    AuthService.getAuthModuleForRoot(),
     LoginModule,
     ProductModule,
   ],
@@ -30,4 +29,4 @@ import { config as oidcConfig } from './oidc.config';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

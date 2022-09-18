@@ -14,12 +14,20 @@ export const config: BaseConfig = {
       description: 'Get the global app configuration'
     },
     {
+      name: Endpoints.IdentityConfiguration,
+      type: HTTPRequestType.GET,
+      url: 'https://func-configuration.azurewebsites.net/api/get-configuration',
+      description: 'Get the global app configuration',
+      meta: { configuration: { serviceName: 'identity' }},
+      factroyQueryParams: _partial => ({ identity: 'true' })
+    },
+    {
       name: Endpoints.ProductsConfiguration,
       type: HTTPRequestType.GET,
       url: 'https://func-configuration.azurewebsites.net/api/get-configuration',
       description: 'Get the global app configuration',
       meta: { configuration: { serviceName: 'products' }},
-      factroyQueryParams: _partial => ({ products: 'true'})
+      factroyQueryParams: _partial => ({ products: 'true' })
     },
     {
       name: Endpoints.Products,

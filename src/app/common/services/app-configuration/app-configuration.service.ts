@@ -5,11 +5,13 @@ import { firstValueFrom } from 'rxjs'
 import { config } from '~/config'
 import { Endpoints } from '~/config/endpoints'
 import { factoryEndpoint } from '~common/services/endpoint/factory-endpoint'
+import { factoryOIDCConfiguration } from '~common/services/auth/oidc.config'
 import { After } from '~common/utilities/after.decorator'
+import { Dummyable } from '~common/utilities/dummyable.decorator'
 import { 
   emitPropertyChange, Stateful 
 } from '~common/utilities/stateful.decorator'
-
+import { developmentAppInitialize, developmentGetAuthConfig } from './helpers'
 
 export interface AppConfigurationService 
   extends Stateful<Partial<AppConfigurationService>> {}
@@ -37,6 +39,7 @@ export class AppConfigurationService {
     return () => configurationService.initialize()
   }
 
+  @Dummyable(developmentAppInitialize)
   async initialize() {
     const url = this.endpoints[Endpoints.Configuration].url
     this.configuration = await firstValueFrom(this.httpClient.get(url))
@@ -66,4 +69,9 @@ export class AppConfigurationService {
     this.configuration = configuration
   }
 
+  // override identity server for non-headless development
+  // @Dummyable(developmentGetAuthConfig)
+  getAuthConfig() {
+    return factoryOIDCConfiguration(this.configuration.identity)
+  }
 }
