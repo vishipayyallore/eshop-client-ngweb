@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { HttpClientModule } from '@angular/common/http'
-import { AuthModule } from 'angular-auth-oidc-client'
+import { HeaderModule, FooterModule } from '@vishipayyallore/design-system'
 
 import { AuthService } from '~common/services/auth/auth.service'
-import { AppConfigurationService } from '~common/services/app-configuration/app-configuration.service'
+import { 
+  AppConfigurationService 
+} from '~common/services/app-configuration/app-configuration.service'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { ProductModule } from './product/product.module'
@@ -22,6 +24,8 @@ import { LoginModule } from './login/login.module'
     AuthService.getAuthModuleForRoot(),
     LoginModule,
     ProductModule,
+    HeaderModule,
+    FooterModule
   ],
   providers: [
     AppConfigurationService.forRoot(),

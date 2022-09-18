@@ -21,6 +21,7 @@
     "@angular/platform-browser": "^14.2.2",
     "@angular/platform-browser-dynamic": "^14.2.2",
     "@angular/router": "^14.2.2",
+    "@vishipayyallore/design-system": "^0.0.5",
     "angular-auth-oidc-client": "^14.1.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

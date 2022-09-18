@@ -1,6 +1,6 @@
-import type { Config } from "../config.interface"
-import { Environments } from "../environments.enum"
-import { config as base } from "../base"
+import type { Config } from "~config/config.interface"
+import { Environments } from "~config/environments.enum"
+import { config as base } from "~config/base"
 
 
 export const config: Config  = {
