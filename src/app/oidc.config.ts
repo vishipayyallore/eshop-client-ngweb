@@ -12,11 +12,23 @@ const localAuthority: OpenIdConfiguration = {
   logLevel: LogLevel.Debug,
 }
 
+const appEshopLocalServicesIdentity: OpenIdConfiguration = {
+  authority: 'https://localhost:5001',
+  redirectUrl: window.location.origin + '/signin-callback',
+  postLogoutRedirectUri: window.location.origin + '/signout-callback',
+  clientId: 'eShop-webclientId',
+  scope: 'openid profile',
+  responseType: 'code',
+  logLevel: LogLevel.Debug
+}
+
+
+// key = Math.max(Object.keys(sessionStorage).filter(k => /eShop-webclientId/.test(k)).map(i => i.split('-', 2)[-1])) + '-eShop-webclientId'
 const appEshopServicesIdentity: OpenIdConfiguration = {
   authority: 'https://app-eshop-services-identity.azurewebsites.net',
   redirectUrl: window.location.origin + '/signin-callback',
   postLogoutRedirectUri: window.location.origin + '/signout-callback',
-  clientId: 'a1eRestaurant-web',
+  clientId: 'eShop-webclientId',
   scope: 'openid profile',
   responseType: 'code',
   logLevel: LogLevel.Debug
@@ -24,5 +36,6 @@ const appEshopServicesIdentity: OpenIdConfiguration = {
 
 export const config: PassedInitialConfig = {
   // config:  localAuthority
-  config: appEshopServicesIdentity
+  config: appEshopServicesIdentity,
+  // config: appEshopLocalServicesIdentity
 }
