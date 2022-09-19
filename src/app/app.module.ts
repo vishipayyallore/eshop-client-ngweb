@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { HttpClientModule } from '@angular/common/http'
-import { HeaderModule, FooterModule } from '@vishipayyallore/design-system'
+import { HeaderModule, FooterModule, ProfileModule } from '@vishipayyallore/design-system'
 
 import { AuthService } from '~common/services/auth/auth.service'
 import { 
@@ -10,12 +10,12 @@ import {
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { ProductModule } from './product/product.module'
-import { LoginModule } from './login/login.module'
+import { LoginModule } from './login/login.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent  
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +25,8 @@ import { LoginModule } from './login/login.module'
     LoginModule,
     ProductModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    ProfileModule
   ],
   providers: [
     AppConfigurationService.forRoot(),

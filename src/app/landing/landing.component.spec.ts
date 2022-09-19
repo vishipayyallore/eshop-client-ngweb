@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { OidcSecurityService } from 'angular-auth-oidc-client'
 
 import { LandingComponent } from './landing.component'
 
@@ -8,6 +9,7 @@ describe('LandingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      providers: [{provide: OidcSecurityService, useValue:{}}],
       declarations: [ LandingComponent ]
     })
     .compileComponents()

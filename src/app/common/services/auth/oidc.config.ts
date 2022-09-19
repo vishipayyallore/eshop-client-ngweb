@@ -9,8 +9,10 @@ export const factoryOIDCConfiguration = ({
 }: {[key: string]: string}) => Object.assign({}, {
   authority,
   redirectUrl: window.location.origin + signInEndpoint,
+  postLoginRoute: '/profile',
   postLogoutRedirectUri: window.location.origin + signOutEndpoint,
   clientId,
   scope,
-  responseType
+  responseType,
+  startCheckSession: true
 })

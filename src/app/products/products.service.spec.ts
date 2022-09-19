@@ -4,7 +4,10 @@ import { of } from 'rxjs'
 
 import { ProductsService } from './products.service'
 import { EndpointService } from '~common/services/endpoint/endpoint.service'
+import { ngMocks } from 'ng-mocks'
 
+
+ngMocks.globalMock(EndpointService)
 
 describe('ProductsService', () => {
   let service: ProductsService
@@ -12,7 +15,6 @@ describe('ProductsService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [{provides: EndpointService, useValue: {get: () => of()}}],
     })
     service = TestBed.inject(ProductsService)
   })

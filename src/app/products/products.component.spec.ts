@@ -7,6 +7,10 @@ import { AppConfigurationService } from '~common/services/app-configuration/app-
 import { ProductsComponent } from './products.component'
 import { ProductsService } from './products.service'
 import { config } from '~/config'
+import { ngMocks } from 'ng-mocks'
+
+
+ngMocks.globalMock(ProductsService)
 
 describe('ProductsComponent', () => {
   let component: ProductsComponent
@@ -23,12 +27,6 @@ describe('ProductsComponent', () => {
             getConfiguration: () => of({}) 
           })
         },
-        {
-          provide: ProductsService, 
-          useValue: {
-            getProducts: () => undefined
-          }
-        }
       ],
     })
     .compileComponents()
