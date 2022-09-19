@@ -3,15 +3,16 @@ import { CommonModule } from '@angular/common'
 
 import { LandingComponent } from './landing.component'
 import { LandingRoutingModule } from './landing-routing.module'
+import { ProfileModule } from '@vishipayyallore/design-system'
 
 
 @NgModule({
-  declarations: [
-    LandingComponent
-  ],
   imports: [
     CommonModule,
     LandingRoutingModule
+  ],
+  declarations: [
+    LandingComponent
   ],
   exports: [
     LandingComponent

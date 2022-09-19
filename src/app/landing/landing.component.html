@@ -1,1 +1,5 @@
-xq<p>landing works!</p>
+<dialog #unauthenticated  *ngIf="authenticationState$ | async">
+  <p>
+    you have successfully signed out
+  </p>
+</dialog>

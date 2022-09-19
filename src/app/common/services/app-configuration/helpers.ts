@@ -1,4 +1,5 @@
 import { firstValueFrom, of } from "rxjs"
+import { LogLevel } from "angular-auth-oidc-client"
 
 import { 
 	appSettings 
@@ -6,6 +7,7 @@ import {
 import { apiDelay } from "~common/utilities/api-delay"
 import { environment } from "~/environments/environment"
 import { config } from "~/config/dev/local-development/overrides/identity-config"
+import { factoryOIDCConfiguration } from "../auth/oidc.config"
 
 
 export const developmentAppInitialize = {
@@ -22,5 +24,11 @@ export async function dummyInitialize(this: {configuration: any}) {
 transact over the network -- is commented out by default in the service */
 export const developmentGetAuthConfig = {
 	override: !environment.production && !environment.isHeadless,
-	factoryResponse: () => config
+	// factoryResponse: () => config
+	factoryResponse(this: {configuration:any}) { 
+		return {
+			logLevel: LogLevel.Debug,
+			...factoryOIDCConfiguration(this.configuration.identity)
+		} 
+	}
 }

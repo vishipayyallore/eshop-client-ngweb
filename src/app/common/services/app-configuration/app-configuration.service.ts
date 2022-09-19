@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http'
 import { APP_INITIALIZER, Injectable } from '@angular/core'
+import { OpenIdConfiguration } from 'angular-auth-oidc-client'
 import { firstValueFrom } from 'rxjs'
 
 import { config } from '~/config'
@@ -12,6 +13,7 @@ import {
   emitPropertyChange, Stateful 
 } from '~common/utilities/stateful.decorator'
 import { developmentAppInitialize, developmentGetAuthConfig } from './helpers'
+
 
 export interface AppConfigurationService 
   extends Stateful<Partial<AppConfigurationService>> {}
@@ -70,8 +72,8 @@ export class AppConfigurationService {
   }
 
   // override identity server for non-headless development
-  // @Dummyable(developmentGetAuthConfig)
-  getAuthConfig() {
+  @Dummyable(developmentGetAuthConfig)
+  getAuthConfig(): OpenIdConfiguration {
     return factoryOIDCConfiguration(this.configuration.identity)
   }
 }

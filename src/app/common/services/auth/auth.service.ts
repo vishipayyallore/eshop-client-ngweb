@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core'
+import { ANONYMOUS_PROFILE, ProfileService } from '@vishipayyallore/design-system'
 import { 
   AuthModule, LoginResponse, OidcSecurityService, 
   PassedInitialConfig, StsConfigLoader 
 } from 'angular-auth-oidc-client'
-import { Observable, shareReplay } from 'rxjs'
+import { map, ReplaySubject } from 'rxjs'
 
 import { 
   AppConfigurationService 
 } from '~common/services/app-configuration/app-configuration.service'
 import { Dummyable } from '~common/utilities/dummyable.decorator'
 import { authFactory } from './auth.factory'
+import { AUTHENTICATED_PROFILE } from './constants'
 import { developmentInitialize } from './helpers'
 
 
@@ -17,9 +19,9 @@ import { developmentInitialize } from './helpers'
   providedIn: 'root'
 })
 export class AuthService {
-  loginResponse$!: Observable<LoginResponse>
+  private loginResponse = new ReplaySubject<LoginResponse>(1)
+  loginResponse$ = this.loginResponse.asObservable()
   isAuthenticated?: boolean
-  userData: any
 
   /** 
    * @static @method forRoot
@@ -28,12 +30,14 @@ export class AuthService {
   static forRoot() {
     return { 
       provide: AuthService, 
-      useFactory: (oidcSecurityService: OidcSecurityService) => {
-        const service = new AuthService(oidcSecurityService)
+      useFactory: (
+        oidcSecurityService: OidcSecurityService, 
+        profileService: ProfileService) => {
+        const service = new AuthService(oidcSecurityService, profileService)
         service.initialize()
         return service
       }, 
-      deps: [OidcSecurityService]
+      deps: [OidcSecurityService, ProfileService, AppConfigurationService]
     }
   }
 
@@ -57,12 +61,32 @@ export class AuthService {
     }
   }
 
-  constructor(private oidcSecurityService: OidcSecurityService) { }
+  constructor(
+    private oidcSecurityService: OidcSecurityService,
+    private profileService: ProfileService) {
+  }
 
   @Dummyable(developmentInitialize)
   initialize() {
-    this.loginResponse$ = this.oidcSecurityService.checkAuth()
-      .pipe(shareReplay(1))
-  }  
+    this.oidcSecurityService.checkAuth()
+      .subscribe(x => this.loginResponse.next(x))
+
+    this.oidcSecurityService.userData$
+    .subscribe(({userData}) => this.profileService.userData.next(userData))
+  
+    this.oidcSecurityService.isAuthenticated$
+      .pipe(map(({isAuthenticated}) => isAuthenticated))
+      .subscribe(this.onAuthenticationStateChange.bind(this))
+  }
+
+  private onAuthenticationStateChange(isAuthenticated: boolean){
+    console.log('onAuthenticationStateChange', isAuthenticated)
+    this.isAuthenticated = isAuthenticated
+    if(isAuthenticated) {
+      this.profileService.profileIcon.next(AUTHENTICATED_PROFILE)
+    } else {
+      this.profileService.profileIcon.next(ANONYMOUS_PROFILE)
+    }
+  }
 
 }

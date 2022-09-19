@@ -1,11 +1,10 @@
-<header>
-    <h1>{{title}}</h1>
-    <app-login></app-login>
-</header>
-
-
 <eshop-header></eshop-header>
 <main>
     <router-outlet></router-outlet>
 </main>
 <eshop-footer></eshop-footer>
+
+<ng-template #loginControl>
+    <eshop-profile [isShowingIconView]="true"></eshop-profile>
+    <app-login></app-login>
+</ng-template>
