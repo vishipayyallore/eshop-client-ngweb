@@ -1,58 +1,47 @@
-# eshop-client-ngweb
-Angular UI for eshop solution
+# eShop Client Application
 
-## Pre-requisites
-```
-npm i -g @angular/cli
-```
+Angular 14.x UI for eShop Client application
 
-**Note:**
-> 1. Rename the colission files such as Readme.md, .gitignore
+## Status Badges
 
-## Recipe
+| PR, and CI Builds | Code QL |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| To be done | To be done |
 
-> 1. Create a new project inside the current folder
-```
-ng new eshop-client-ngweb --directory .
-```
+## Pre-Requisites
 
-> 2. We generated/updated the .gitignore file. Such as to add A. macos, B. node, C. Angular, and D. VS Code
+> 1. Windows 10 / Ubuntu 20.04 / Mac OS 12.3 (build 21E230)
+> 1. NPM
+> 1. Angular CLI
+> 1. VS Code (<https://code.visualstudio.com/>)
+> 1. Docker Desktop (<https://docs.docker.com/docker-for-windows/install/>)
 
-> 3. Migrate the test to `jest`. We need to execute the below mentioned commands.
-```
-npm i -D jest-preset-angular
-npm i -D jest @types/jest @angular-builders/jest
-npm remove karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter
-rm ./karma.conf.js ./src/test.ts [Mac & Ubuntu]
-rm .\karma.conf.js .\src/test.ts [Windows]
-```
+---
 
-**Hint:** To get the commit `git log -1 --pretty=format:%h`
-> 4. We have to update `tsconfig.spec.json`, and `angular.json`. Please refer `0acfd7a`
+## Links to individual session(s) Documentation and its Videos
 
-> 5. We have created headless configuration file. Also tested with `npm run start` and `npm run start:local-dev`.
+> 1. Please refer [Session1.md](./Documentation/Sessions/Session1.md) and [Video](https://www.youtube.com/watch?v=wQ0Xf4pKZaQ) for more details.
 
-> 6. We have created PATH Aliases.
+---
 
-> 7. We have created eslint configuration file.
+![Information |150x150](./Documentation/Images/Information.PNG)
 
-```
-ng add @angular-eslint/schematics
-```
+## What are we going to do today?
 
-## 08-May-2022
+> 1. Greetings/Introduction Reel (`5 Minutes`)
+> 1. Introduction of eShop Main GitHub Repository (`5 Minutes`)
+> 1. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
+> 1. Deploy Infrastructure and Products Microservices from Main (`5 Minutes`)
+> 1. Introduction to the eShop Client Application Saga (`40 Minutes`)
+> 1. Review/Q & A/Panel Discussion (`5 Minutes`)
+> 1. What is next in `Session 12`? (`5 Minutes`)
 
-Note: 
-Add `"preinstall": "husky install"` to `package.json` under `scripts` section.
+![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
-```
-npm i -D husky
-node_modules/.bin/husky install
-node_modules/.bin/husky add .husky/precommit "npm test"
-node_modules/.bin/husky add .husky/pre-push "npm test"
-```
+---
 
-```bash
-ng g m product
-ng g c product
-```
+## `***** WISH LIST - Future Sessions to be planned *****`
+
+> 1. Dockerize the Client Application
+> 1. Deploy the Client Application to Azure Kubernetes Service
+> 1. GitHUB Actions for CI/CD
