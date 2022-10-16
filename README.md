@@ -39,3 +39,9 @@ Angular 14.x UI for eShop Client application
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
 ---
+
+## `***** WISH LIST - Future Sessions to be planned *****`
+
+> 1. Dockerize the Client Application
+> 1. Deploy the Client Application to Azure Kubernetes Service
+> 1. GitHUB Actions for CI/CD
