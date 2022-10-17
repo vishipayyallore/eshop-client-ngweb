@@ -15,6 +15,7 @@ Angular 14.x UI for eShop Client application
 > 1. Angular CLI
 > 1. VS Code (<https://code.visualstudio.com/>)
 > 1. Docker Desktop (<https://docs.docker.com/docker-for-windows/install/>)
+> 1. PowerShell 7+
 
 ---
 
@@ -53,8 +54,17 @@ Angular 14.x UI for eShop Client application
 
 > 1. Discussion and Demo
 > 1. show how we intend to add projects to eshop-main, how it is documented for reuse.
-> 1. show script itself.
-> 1. run script
+-> 1. show script itself. Run script
+
+### Executing PowerShell Script to Pull/Get the latest code from GitHub
+
+**Note:** Please make sure you have PowerShell 7+ installed on your machine.
+
+```powershell
+Install-Module PowerShell-yaml -Force
+```
+
+![PS Script For Get/Pull Repositories |150x150](./Documentation/Images/S1/PSScriptForRepositories.PNG)
 
 ## 4. Deploy Infrastructure and Products Microservices from Main (`5 Minutes`)
 
