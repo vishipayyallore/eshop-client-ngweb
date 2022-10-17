@@ -51,13 +51,21 @@ Angular 14.x UI for eShop Client application
 > 1. that is, rebuild them first
 > 1. show how we intend to add projects to eshop-main, how it is documented for reuse.
 
+### Parent Folder for all Microservices
+
+![Parent Folder for all Microservices |150x150](./Documentation/Images/S1/Parent_Folder_Microservices.PNG)
+
+### eShop Main Folder
+
+![eShop Main Folder |150x150](./Documentation/Images/S1/eShop-Main-Folder.PNG)
+
 ## 3. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
 
 > 1. Discussion and Demo
 
 ### Executing Shell Script to Pull/Get the latest code from GitHub
 
-![Shell Script For Get/Pull Repositories |150x150](./Documentation/Images/S1/PSScriptForRepositories.PNG)
+![Shell Script For Get/Pull Repositories |150x150](./Documentation/Images/S1/ShellScriptForRepositories.PNG)
 
 ### Executing PowerShell Script to Pull/Get the latest code from GitHub
 
