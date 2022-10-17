@@ -49,12 +49,15 @@ Angular 14.x UI for eShop Client application
 > 1. the build pattern that we are adopting: deploy latest artifacts
 > 1. discuss what to do if we are wanting to regenerate artifacts
 > 1. that is, rebuild them first
+> 1. show how we intend to add projects to eshop-main, how it is documented for reuse.
 
 ## 3. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
 
 > 1. Discussion and Demo
-> 1. show how we intend to add projects to eshop-main, how it is documented for reuse.
--> 1. show script itself. Run script
+
+### Executing Shell Script to Pull/Get the latest code from GitHub
+
+![Shell Script For Get/Pull Repositories |150x150](./Documentation/Images/S1/PSScriptForRepositories.PNG)
 
 ### Executing PowerShell Script to Pull/Get the latest code from GitHub
 
@@ -64,7 +67,7 @@ Angular 14.x UI for eShop Client application
 Install-Module PowerShell-yaml -Force
 ```
 
-![PS Script For Get/Pull Repositories |150x150](./Documentation/Images/S1/PSScriptForRepositories.PNG)
+![PowerShell Script For Get/Pull Repositories |150x150](./Documentation/Images/S1/PSScriptForRepositories.PNG)
 
 ## 4. Deploy Infrastructure and Products Microservices from Main (`5 Minutes`)
 
