@@ -84,29 +84,34 @@ Install-Module PowerShell-yaml -Force
 ## 5. Introduction to the eShop Client Application Saga (`40 Minutes`)
 
 > 1. Discussion and Demo
-> 1. client application in Angular (5 minutes)
 
-        > 1. why angular? why not?
+### Client application in Angular (5 minutes)
 
-> 1. how to start a project (discuss why we are tagging everything @14.2 to ensure consistency) (5 minutes)
+> 1. Discussion
+> 1. why angular? why not?
 
-        > 1. ng new <project>
-        > 1. indicate that this is an npm project (modify package.json as desired)
+### How to start a project (discuss why we are tagging everything @14.2 to ensure consistency) (5 minutes)
 
-> 1. add Products component (5 minutes)
+> 1. ng new `Project-Name`
+> 1. indicate that this is an npm project (modify package.json as desired)
 
-        > 1. discuss using configuration variables
-        > 1. demo client
+### Add Products component (5 minutes)
 
-> 1. discuss routing (10 minutes)
-        > 1. add product route
-        > 1. add default route
+> 1. discuss using configuration variables
+> 1. demo client
 
-> 1. demo client -showing same view from default route (10 minutes)
+### Discuss routing (10 minutes)
 
-        > 1. add products styling
+> 1. add product route
+> 1. add default route
 
-> 1. discuss production build process (5 minutes)
+### Demo client -showing same view from default route (10 minutes)
+
+> 1. add products styling
+
+### Discuss production build process (5 minutes)
+
+> 1. Discussion and Demo
 
 ## 6. Review/Q & A/Panel Discussion (`5 Minutes`)
 
