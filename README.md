@@ -46,10 +46,6 @@ Angular 14.x UI for eShop Client application
 ## 2. Introduction of eShop Main GitHub Repository (`5 Minutes`)
 
 > 1. Discussion and Demo
-> 1. the build pattern that we are adopting: deploy latest artifacts
-> 1. discuss what to do if we are wanting to regenerate artifacts
-> 1. that is, rebuild them first
-> 1. show how we intend to add projects to eshop-main, how it is documented for reuse.
 
 ### Parent Folder for all Microservices
 
