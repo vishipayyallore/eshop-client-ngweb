@@ -77,6 +77,10 @@ Install-Module PowerShell-yaml -Force
 
 > 1. Discussion and Demo
 
+### Deploy Entire Solution
+
+![Deploy Entire Solution |150x150](./Documentation/Images/S1/DeployEntireSolution.PNG)
+
 ## 5. Introduction to the eShop Client Application Saga (`40 Minutes`)
 
 > 1. Discussion and Demo
