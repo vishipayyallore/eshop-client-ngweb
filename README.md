@@ -90,22 +90,44 @@ Install-Module PowerShell-yaml -Force
 > 1. Discussion
 > 1. why angular? why not?
 
-### How to start a project (discuss why we are tagging everything @14.2 to ensure consistency) (5 minutes)
+### How to start a project (discuss why we are using @14.2) (5 minutes)
 
-> 1. ng new `Project-Name`
+> 1. start an new angular project
+![ng new screenshot](./Documentation/Images/ng%20new.png)
+> 2. installed versions - node, angular/cli
+> 3. ng new
+
 > 1. indicate that this is an npm project (modify package.json as desired)
+![package.json screenshot](./Documentation/Images/package%20json.png)
 
 ### Add Products component (5 minutes)
 
 > 1. discuss using configuration variables
+![configuration screenshot](./Documentation/Images/configuration.png)
+> 2. indicate apiHost for products
+![show environment with changes to ts](./Documentation/Images/show%20environment%20-%20ts.png)
+> expose process.env and angular's environment in component
+![show environment with changes to html](./Documentation/Images/show%20environment%20-%20html.png)
+> render process.env and angular's environment
+![show environment rendered in browser](./Documentation/Images/show%20environment%20-%20page.png)
+
+> 1. set up products component
+![products component ts](./Documentation/Images/products%20component%20-%20ts.png)
+> set up a component to render products (which we will get from a service, following MVC)
+![products html](./Documentation/Images/products%20component%20-%20html.png)
+> use async pipe to render products as they become available
+![products service](./Documentation/Images/products%20service%20-%20basic%20concept.png)
+> handle transaction logic in a service
+> 
 > 1. demo client
 
 ### Discuss routing (10 minutes)
 
 > 1. add product route
 > 1. add default route
+![routing screenshot](./Documentation/Images/routing.png)
 
-### Demo client -showing same view from default route (10 minutes)
+### Demo client -showing from default route (10 minutes)
 
 > 1. add products styling
 
