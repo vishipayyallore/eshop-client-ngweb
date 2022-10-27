@@ -85,20 +85,21 @@ Install-Module PowerShell-yaml -Force
 
 > 1. Discussion and Demo
 
-### Client application in Angular (5 minutes)
+### Client application in Angular (`5 minutes`)
 
 > 1. Discussion
 > 1. why angular? why not?
 
-### How to start a project (discuss why we are using @14.2) (5 minutes)
+### How to start a project (`5 minutes`)
 
-> 1. start an new angular project
-![ng new screenshot](./Documentation/Images/ng%20new.png)
-> 2. installed versions - node, angular/cli
-> 3. ng new
-
-> 1. indicate that this is an npm project (modify package.json as desired)
-![package.json screenshot](./Documentation/Images/package%20json.png)
+> 1. Demo and Discussion
+> 2. Discuss why we are using @14.2
+> 3. Start an new angular project
+![ng new screenshot](./Documentation/Images/S1/Ng_New.PNG)
+> 4. Installed versions - node, angular/cli
+> 5. `ng new` to create a new project
+> 6. Indicate that this is an npm project (modify package.json as desired)
+![package.json screenshot](./Documentation/Images/S1/Package_Json.PNG)
 
 ### Add Products component (5 minutes)
 
@@ -118,7 +119,7 @@ Install-Module PowerShell-yaml -Force
 > use async pipe to render products as they become available
 ![products service](./Documentation/Images/products%20service%20-%20basic%20concept.png)
 > handle transaction logic in a service
-> 
+>
 > 1. demo client
 
 ### Discuss routing (10 minutes)
