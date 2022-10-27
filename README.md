@@ -85,41 +85,45 @@ Install-Module PowerShell-yaml -Force
 
 > 1. Discussion and Demo
 
-### Client application in Angular (5 minutes)
+### Client application in Angular (`5 minutes`)
 
 > 1. Discussion
 > 1. why angular? why not?
 
-### How to start a project (discuss why we are using @14.2) (5 minutes)
+### How to start a project (`5 minutes`)
 
-> 1. start an new angular project
-![ng new screenshot](./Documentation/Images/ng%20new.png)
-> 2. installed versions - node, angular/cli
-> 3. ng new
+> 1. Demo and Discussion
+> 2. Discuss why we are using @14.2
+> 3. Start an new angular project
+![ng new screenshot](./Documentation/Images/S1/Ng_New.PNG)
+> 4. Installed versions - node, angular/cli
+> 5. `ng new` to create a new project
+> 6. Indicate that this is an npm project (modify package.json as desired)
+![package.json screenshot](./Documentation/Images/S1/Package_Json.PNG)
 
-> 1. indicate that this is an npm project (modify package.json as desired)
-![package.json screenshot](./Documentation/Images/package%20json.png)
+### How to add Configuration (`5 minutes`)
 
-### Add Products component (5 minutes)
+> 1. Discuss using configuration variables
+![configuration screenshot](./Documentation/Images/S1/Configuration.PNG)
+> 2. Indicate `apiHost` for products
+![show environment with changes to ts](./Documentation/Images/S1/Show_Environment_TS.PNG)
+> 3. Expose `process.env` and `angular's environment` inside the component
+![show environment with changes to html](./Documentation/Images/S1/Show_Environment_Html.PNG)
+> 4. Render `process.env` and `angular's environment` inside Browser
+![show environment rendered in browser](./Documentation/Images/S1/Show_Environment_Page.PNG)
 
-> 1. discuss using configuration variables
-![configuration screenshot](./Documentation/Images/configuration.png)
-> 2. indicate apiHost for products
-![show environment with changes to ts](./Documentation/Images/show%20environment%20-%20ts.png)
-> expose process.env and angular's environment in component
-![show environment with changes to html](./Documentation/Images/show%20environment%20-%20html.png)
-> render process.env and angular's environment
-![show environment rendered in browser](./Documentation/Images/show%20environment%20-%20page.png)
+### Add Products component (`5 minutes`)
 
-> 1. set up products component
-![products component ts](./Documentation/Images/products%20component%20-%20ts.png)
-> set up a component to render products (which we will get from a service, following MVC)
-![products html](./Documentation/Images/products%20component%20-%20html.png)
-> use async pipe to render products as they become available
-![products service](./Documentation/Images/products%20service%20-%20basic%20concept.png)
-> handle transaction logic in a service
-> 
-> 1. demo client
+> 1. Setup products component
+![products component ts](./Documentation/Images/S1/Products_Component_Ts.PNG)
+> 2. Setup a component to render products (which we will get from a service, following MVC)
+![products html](./Documentation/Images/S1/Products_Component_Html.PNG)
+> 3. Use `async pipe` to render products as they become available
+![products service](./Documentation/Images/S1/Products_Service_Basic_Concept.PNG)
+> 4. Handle transaction logic in a service
+**Robbie Do we have Image here ???**
+> 5. Demo Client
+**Robbie to inject Client Image**
 
 ### Discuss routing (10 minutes)
 
