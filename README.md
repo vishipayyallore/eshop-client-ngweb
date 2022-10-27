@@ -114,15 +114,16 @@ Install-Module PowerShell-yaml -Force
 
 ### Add Products component (`5 minutes`)
 
-> 1. set up products component
-![products component ts](./Documentation/Images/products%20component%20-%20ts.png)
-> set up a component to render products (which we will get from a service, following MVC)
-![products html](./Documentation/Images/products%20component%20-%20html.png)
-> use async pipe to render products as they become available
-![products service](./Documentation/Images/products%20service%20-%20basic%20concept.png)
-> handle transaction logic in a service
->
-> 1. demo client
+> 1. Setup products component
+![products component ts](./Documentation/Images/S1/Products_Component_Ts.PNG)
+> 2. Setup a component to render products (which we will get from a service, following MVC)
+![products html](./Documentation/Images/S1/Products_Component_Html.PNG)
+> 3. Use `async pipe` to render products as they become available
+![products service](./Documentation/Images/S1/Products_Service_Basic_Concept.PNG)
+> 4. Handle transaction logic in a service
+**Robbie Do we have Image here ???**
+> 5. Demo Client
+**Robbie to inject Client Image**
 
 ### Discuss routing (10 minutes)
 
