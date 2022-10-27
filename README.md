@@ -101,16 +101,18 @@ Install-Module PowerShell-yaml -Force
 > 6. Indicate that this is an npm project (modify package.json as desired)
 ![package.json screenshot](./Documentation/Images/S1/Package_Json.PNG)
 
-### Add Products component (5 minutes)
+### How to add Configuration (`5 minutes`)
 
-> 1. discuss using configuration variables
-![configuration screenshot](./Documentation/Images/configuration.png)
-> 2. indicate apiHost for products
-![show environment with changes to ts](./Documentation/Images/show%20environment%20-%20ts.png)
-> expose process.env and angular's environment in component
-![show environment with changes to html](./Documentation/Images/show%20environment%20-%20html.png)
-> render process.env and angular's environment
-![show environment rendered in browser](./Documentation/Images/show%20environment%20-%20page.png)
+> 1. Discuss using configuration variables
+![configuration screenshot](./Documentation/Images/S1/Configuration.PNG)
+> 2. Indicate `apiHost` for products
+![show environment with changes to ts](./Documentation/Images/S1/Show_Environment_TS.PNG)
+> 3. Expose `process.env` and `angular's environment` inside the component
+![show environment with changes to html](./Documentation/Images/S1/Show_Environment_Html.PNG)
+> 4. Render `process.env` and `angular's environment` inside Browser
+![show environment rendered in browser](./Documentation/Images/S1/Show_Environment_Page.PNG)
+
+### Add Products component (`5 minutes`)
 
 > 1. set up products component
 ![products component ts](./Documentation/Images/products%20component%20-%20ts.png)
