@@ -101,39 +101,54 @@ Install-Module PowerShell-yaml -Force
 > 6. Indicate that this is an npm project (modify package.json as desired)
 ![package.json screenshot](./Documentation/Images/S1/Package_Json.PNG)
 
-### How to add Configuration (`5 minutes`)
+### Discuss Configuration (`5 minutes`)
 
-> 1. Discuss using configuration variables and Indicate `apiHost` for products
+> 1. Angular configuration variables
 ![configuration screenshot](./Documentation/Images/S1/Configuration.PNG)
-> 2. Expose `process.env` and `angular's environment` inside the component
+> 2. Expose `process.env` and _angular's environment_ inside the component
 ![show environment with changes to ts](./Documentation/Images/S1/Show_Environment_TS.PNG)
-> 3. Render `process.env` and `angular's environment` inside Html
+> 3. Render `process.env` and _angular's environment_ inside the template
 ![show environment with changes to html](./Documentation/Images/S1/Show_Environment_Html.PNG)
-> 4. Render `process.env` and `angular's environment` inside Browser
+> 4. Render `process.env` and `angular's environment` in Browser
 ![show environment rendered in browser](./Documentation/Images/S1/Show_Environment_Page.PNG)
 
 ### Add Products component (`5 minutes`)
 
 > 1. Setup products component
 ![products component ts](./Documentation/Images/S1/Products_Component_Ts.PNG)
-> 2. Setup a component to render products (which we will get from a service, following MVC)
+> 2. Setup products component template using `async pipe`
 ![products html](./Documentation/Images/S1/Products_Component_Html.PNG)
-> 3. Use `async pipe` to render products as they become available
+> 3. Provide products to render in component
 ![products service](./Documentation/Images/S1/Products_Service_Basic_Concept.PNG)
-> 4. Handle transaction logic in a service
-**Robbie Do we have Image here ???**
-> 5. Demo Client
-**Robbie to inject Client Image**
+> 4. support HttpClient from app module
+![add HttpClient](./Documentation/Images/S1/app%20module%20http%20client.png)
 
 ### Discuss routing (10 minutes)
 
 > 1. add product route
 > 1. add default route
-![routing screenshot](./Documentation/Images/routing.png)
+![routing screenshot](./Documentation/Images/S1/app%20routing%20module.png)
+> 2. add router outlet
+![router outlet](./Documentation/Images/S1/router%20outlet.png)
+> 3. set up lazy-loading of products module
+![lazy-loaded products](./Documentation/Images/S1/products%20module%20changes.png)
+![products child routes](./Documentation/Images/S1/products%20routing%20module.png)
+> 5. Demo Client
+> ![products raw json demo](./Documentation/Images/S1/demo%20products.png)
 
-### Demo client -showing from default route (10 minutes)
+### Make products look more like products (10 minutes)
 
-> 1. add products styling
+> 1. add product component
+![create scaffolding with cli](./Documentation/Images/S1/create%20product%20with%20cli.png)
+![product component](./Documentation/Images/S1/create%20product%20component.png)
+![product template](./Documentation/Images/S1/create%20product%20template.png)
+> 1. add product styling
+![product styling](./Documentation/Images/S1/style%20product.png)
+> 1. add product component to products
+![add to module](./Documentation/Images/S1/add%20product%20to%20products%20module.png)
+![add to template](./Documentation/Images/S1/add%20product%20component%20to%20products%20template.png)
+> 3. demo products
+![demo styled products](./Documentation/Images/S1/demo%20styled%20products.png)
 
 ### Discuss production build process (5 minutes)
 
