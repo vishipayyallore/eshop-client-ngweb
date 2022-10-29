@@ -127,11 +127,11 @@ Install-Module PowerShell-yaml -Force
 
 > 1. Add `product` route
 > 2. Add `default` route
-![routing screenshot](./Documentation/Images/S1/app%20routing%20module.png)
+![routing screenshot](./Documentation/Images/S1/AppRoutingModule.PNG)
 > 3. Add router outlet
-![router outlet](./Documentation/Images/S1/router%20outlet.png)
+![router outlet](./Documentation/Images/S1/RouterOutlet.PNG)
 > 4. Setup lazy-loading of products module
-![lazy-loaded products](./Documentation/Images/S1/products%20module%20changes.png)
+![lazy-loaded products](./Documentation/Images/S1/ProductsModuleChanges.PNG)
 ![products child routes](./Documentation/Images/S1/ProductsRoutingModule.PNG)
 > 5. Demo `Client Application` in Browser
 > ![products raw json demo](./Documentation/Images/S1/DemoProducts.PNG)
