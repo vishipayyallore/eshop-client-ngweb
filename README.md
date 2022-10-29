@@ -49,11 +49,11 @@ Angular 14.x UI for eShop Client application
 
 ### Parent Folder for all Microservices
 
-![Parent Folder for all Microservices |150x150](./Documentation/Images/S1/Parent_Folder_Microservices.PNG)
+![Parent Folder for all Microservices |150x150](./Documentation/Images/S1/ParentFolderMicroservices.PNG)
 
 ### eShop Main Folder
 
-![eShop Main Folder |150x150](./Documentation/Images/S1/eShop-Main-Folder.PNG)
+![eShop Main Folder |150x150](./Documentation/Images/S1/eShopMainFolder.PNG)
 
 ## 3. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
 
@@ -88,52 +88,69 @@ Install-Module PowerShell-yaml -Force
 ### Client application in Angular (`5 minutes`)
 
 > 1. Discussion
-> 1. why angular? why not?
+> 1. Why Angular? Why not?
 
 ### How to start a project (`5 minutes`)
 
 > 1. Demo and Discussion
 > 2. Discuss why we are using @14.2
 > 3. Start an new angular project
-![ng new screenshot](./Documentation/Images/S1/Ng_New.PNG)
+![ng new screenshot](./Documentation/Images/S1/NgNew.PNG)
 > 4. Installed versions - node, angular/cli
 > 5. `ng new` to create a new project
 > 6. Indicate that this is an npm project (modify package.json as desired)
-![package.json screenshot](./Documentation/Images/S1/Package_Json.PNG)
+![package.json screenshot](./Documentation/Images/S1/PackageJson.PNG)
 
-### How to add Configuration (`5 minutes`)
+### Discuss Configuration (`5 minutes`)
 
-> 1. Discuss using configuration variables
+> 1. Angular configuration variables
 ![configuration screenshot](./Documentation/Images/S1/Configuration.PNG)
-> 2. Indicate `apiHost` for products
-![show environment with changes to ts](./Documentation/Images/S1/Show_Environment_TS.PNG)
-> 3. Expose `process.env` and `angular's environment` inside the component
-![show environment with changes to html](./Documentation/Images/S1/Show_Environment_Html.PNG)
-> 4. Render `process.env` and `angular's environment` inside Browser
-![show environment rendered in browser](./Documentation/Images/S1/Show_Environment_Page.PNG)
+> 2. Expose `process.env` and _angular's environment_ inside the component
+![show environment with changes to ts](./Documentation/Images/S1/ShowEnvironmentTS.PNG)
+> 3. Render `process.env` and _angular's environment_ inside the template
+![show environment with changes to html](./Documentation/Images/S1/ShowEnvironmentHtml.PNG)
+> 4. Viewing `process.env` and angular's environment in Browser
+![show environment rendered in browser](./Documentation/Images/S1/ShowEnvironmentPage.PNG)
 
 ### Add Products component (`5 minutes`)
 
 > 1. Setup products component
-![products component ts](./Documentation/Images/S1/Products_Component_Ts.PNG)
-> 2. Setup a component to render products (which we will get from a service, following MVC)
-![products html](./Documentation/Images/S1/Products_Component_Html.PNG)
-> 3. Use `async pipe` to render products as they become available
-![products service](./Documentation/Images/S1/Products_Service_Basic_Concept.PNG)
-> 4. Handle transaction logic in a service
-**Robbie Do we have Image here ???**
-> 5. Demo Client
-**Robbie to inject Client Image**
+![products component ts](./Documentation/Images/S1/ProductsComponentTs.PNG)
+> 2. Setup products component template using `async pipe`
+![products html](./Documentation/Images/S1/ProductsComponentHtml.PNG)
+> 3. Provide products to render in component
+![products service](./Documentation/Images/S1/ProductsServiceBasicConcept.PNG)
+> 4. Support `HttpClient` from app module
+![add HttpClient](./Documentation/Images/S1/AppModuleHttpClient.PNG)
+> 5. Create `product` Module
+![add HttpClient](./Documentation/Images/S1/CreateProductModule.PNG)
 
-### Discuss routing (10 minutes)
+### Discuss `routing` (10 minutes)
 
-> 1. add product route
-> 1. add default route
-![routing screenshot](./Documentation/Images/routing.png)
+> 1. Add `product` route
+> 2. Add `default` route
+![routing screenshot](./Documentation/Images/S1/AppRoutingModule.PNG)
+> 3. Add router outlet
+![router outlet](./Documentation/Images/S1/RouterOutlet.PNG)
+> 4. Setup lazy-loading of products module
+![lazy-loaded products](./Documentation/Images/S1/ProductsModuleChanges.PNG)
+![products child routes](./Documentation/Images/S1/ProductsRoutingModule.PNG)
+> 5. Demo `Client Application` in Browser
+> ![products raw json demo](./Documentation/Images/S1/DemoProducts.PNG)
 
-### Demo client -showing from default route (10 minutes)
+### Make `products` look more like `products` (10 minutes)
 
-> 1. add products styling
+> 1. Add product component
+![create scaffolding with cli](./Documentation/Images/S1/CreateProductWithCli.PNG)
+![product component](./Documentation/Images/S1/CreateProductComponent.PNG)
+![product template](./Documentation/Images/S1/CreateProductTemplate.PNG)
+> 2. Add `product` styling
+![product styling](./Documentation/Images/S1/StyleProduct.PNG)
+> 3. Add `product` component to `products` module
+![add to module](./Documentation/Images/S1/AddProductToProductsModule.PNG)
+![add to template](./Documentation/Images/S1/AddProductComponentToProductsTemplate.PNG)
+> 4. Demo `products` page in Browser
+![demo styled products](./Documentation/Images/S1/DemoStyledProducts.PNG)
 
 ### Discuss production build process (5 minutes)
 
