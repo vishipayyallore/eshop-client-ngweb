@@ -109,7 +109,7 @@ Install-Module PowerShell-yaml -Force
 ![show environment with changes to ts](./Documentation/Images/S1/Show_Environment_TS.PNG)
 > 3. Render `process.env` and _angular's environment_ inside the template
 ![show environment with changes to html](./Documentation/Images/S1/Show_Environment_Html.PNG)
-> 4. Render `process.env` and `angular's environment` in Browser
+> 4. Viewing `process.env` and angular's environment in Browser
 ![show environment rendered in browser](./Documentation/Images/S1/Show_Environment_Page.PNG)
 
 ### Add Products component (`5 minutes`)
@@ -120,17 +120,17 @@ Install-Module PowerShell-yaml -Force
 ![products html](./Documentation/Images/S1/Products_Component_Html.PNG)
 > 3. Provide products to render in component
 ![products service](./Documentation/Images/S1/Products_Service_Basic_Concept.PNG)
-> 4. support HttpClient from app module
+> 4. Support `HttpClient` from app module
 ![add HttpClient](./Documentation/Images/S1/app%20module%20http%20client.png)
 
-### Discuss routing (10 minutes)
+### Discuss `routing` (10 minutes)
 
-> 1. add product route
-> 1. add default route
+> 1. Add `product` route
+> 2. Add `default` route
 ![routing screenshot](./Documentation/Images/S1/app%20routing%20module.png)
-> 2. add router outlet
+> 3. Add router outlet
 ![router outlet](./Documentation/Images/S1/router%20outlet.png)
-> 3. set up lazy-loading of products module
+> 4. Setup lazy-loading of products module
 ![lazy-loaded products](./Documentation/Images/S1/products%20module%20changes.png)
 ![products child routes](./Documentation/Images/S1/products%20routing%20module.png)
 > 5. Demo Client
