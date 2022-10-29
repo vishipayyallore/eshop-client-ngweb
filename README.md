@@ -144,9 +144,9 @@ Install-Module PowerShell-yaml -Force
 ![product template](./Documentation/Images/S1/create%20product%20template.png)
 > 2. Add `product` styling
 ![product styling](./Documentation/Images/S1/style%20product.png)
-> 3. Add `product` component to products module
-![add to module](./Documentation/Images/S1/add%20product%20to%20products%20module.png)
-![add to template](./Documentation/Images/S1/add%20product%20component%20to%20products%20template.png)
+> 3. Add `product` component to `products` module
+![add to module](./Documentation/Images/S1/AddProductToProductsModule.PNG)
+![add to template](./Documentation/Images/S1/AddProductComponentToProductsTemplate.PNG)
 > 4. Demo `products` page in Browser
 ![demo styled products](./Documentation/Images/S1/demo%20styled%20products.png)
 
