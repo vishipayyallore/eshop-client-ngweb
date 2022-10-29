@@ -121,7 +121,9 @@ Install-Module PowerShell-yaml -Force
 > 3. Provide products to render in component
 ![products service](./Documentation/Images/S1/Products_Service_Basic_Concept.PNG)
 > 4. Support `HttpClient` from app module
-![add HttpClient](./Documentation/Images/S1/app%20module%20http%20client.png)
+![add HttpClient](./Documentation/Images/S1/AppModuleHttpClient.PNG)
+> 5. Create `product` Module
+![add HttpClient](./Documentation/Images/S1/CreateProductModule.PNG)
 
 ### Discuss `routing` (10 minutes)
 
