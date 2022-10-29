@@ -132,16 +132,16 @@ Install-Module PowerShell-yaml -Force
 ![router outlet](./Documentation/Images/S1/router%20outlet.png)
 > 4. Setup lazy-loading of products module
 ![lazy-loaded products](./Documentation/Images/S1/products%20module%20changes.png)
-![products child routes](./Documentation/Images/S1/products%20routing%20module.png)
+![products child routes](./Documentation/Images/S1/ProductsRoutingModule.PNG)
 > 5. Demo `Client Application` in Browser
-> ![products raw json demo](./Documentation/Images/S1/demo%20products.png)
+> ![products raw json demo](./Documentation/Images/S1/DemoProducts.PNG)
 
 ### Make `products` look more like `products` (10 minutes)
 
 > 1. Add product component
-![create scaffolding with cli](./Documentation/Images/S1/create%20product%20with%20cli.png)
-![product component](./Documentation/Images/S1/create%20product%20component.png)
-![product template](./Documentation/Images/S1/create%20product%20template.png)
+![create scaffolding with cli](./Documentation/Images/S1/CreateProductWithCli.PNG)
+![product component](./Documentation/Images/S1/CreateProductComponent.PNG)
+![product template](./Documentation/Images/S1/CreateProductTemplate.PNG)
 > 2. Add `product` styling
 ![product styling](./Documentation/Images/S1/StyleProduct.PNG)
 > 3. Add `product` component to `products` module
