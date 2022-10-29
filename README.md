@@ -106,11 +106,11 @@ Install-Module PowerShell-yaml -Force
 > 1. Angular configuration variables
 ![configuration screenshot](./Documentation/Images/S1/Configuration.PNG)
 > 2. Expose `process.env` and _angular's environment_ inside the component
-![show environment with changes to ts](./Documentation/Images/S1/Show_Environment_TS.PNG)
+![show environment with changes to ts](./Documentation/Images/S1/ShowEnvironmentTS.PNG)
 > 3. Render `process.env` and _angular's environment_ inside the template
-![show environment with changes to html](./Documentation/Images/S1/Show_Environment_Html.PNG)
+![show environment with changes to html](./Documentation/Images/S1/ShowEnvironmentHtml.PNG)
 > 4. Viewing `process.env` and angular's environment in Browser
-![show environment rendered in browser](./Documentation/Images/S1/Show_Environment_Page.PNG)
+![show environment rendered in browser](./Documentation/Images/S1/ShowEnvironmentPage.PNG)
 
 ### Add Products component (`5 minutes`)
 
@@ -119,7 +119,7 @@ Install-Module PowerShell-yaml -Force
 > 2. Setup products component template using `async pipe`
 ![products html](./Documentation/Images/S1/ProductsComponentHtml.PNG)
 > 3. Provide products to render in component
-![products service](./Documentation/Images/S1/Products_Service_Basic_Concept.PNG)
+![products service](./Documentation/Images/S1/ProductsServiceBasicConcept.PNG)
 > 4. Support `HttpClient` from app module
 ![add HttpClient](./Documentation/Images/S1/AppModuleHttpClient.PNG)
 > 5. Create `product` Module
