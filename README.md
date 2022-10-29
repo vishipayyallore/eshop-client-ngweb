@@ -49,11 +49,11 @@ Angular 14.x UI for eShop Client application
 
 ### Parent Folder for all Microservices
 
-![Parent Folder for all Microservices |150x150](./Documentation/Images/S1/Parent_Folder_Microservices.PNG)
+![Parent Folder for all Microservices |150x150](./Documentation/Images/S1/ParentFolderMicroservices.PNG)
 
 ### eShop Main Folder
 
-![eShop Main Folder |150x150](./Documentation/Images/S1/eShop-Main-Folder.PNG)
+![eShop Main Folder |150x150](./Documentation/Images/S1/eShopMainFolder.PNG)
 
 ## 3. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
 
@@ -95,11 +95,11 @@ Install-Module PowerShell-yaml -Force
 > 1. Demo and Discussion
 > 2. Discuss why we are using @14.2
 > 3. Start an new angular project
-![ng new screenshot](./Documentation/Images/S1/Ng_New.PNG)
+![ng new screenshot](./Documentation/Images/S1/NgNew.PNG)
 > 4. Installed versions - node, angular/cli
 > 5. `ng new` to create a new project
 > 6. Indicate that this is an npm project (modify package.json as desired)
-![package.json screenshot](./Documentation/Images/S1/Package_Json.PNG)
+![package.json screenshot](./Documentation/Images/S1/PackageJson.PNG)
 
 ### Discuss Configuration (`5 minutes`)
 
@@ -115,9 +115,9 @@ Install-Module PowerShell-yaml -Force
 ### Add Products component (`5 minutes`)
 
 > 1. Setup products component
-![products component ts](./Documentation/Images/S1/Products_Component_Ts.PNG)
+![products component ts](./Documentation/Images/S1/ProductsComponentTs.PNG)
 > 2. Setup products component template using `async pipe`
-![products html](./Documentation/Images/S1/Products_Component_Html.PNG)
+![products html](./Documentation/Images/S1/ProductsComponentHtml.PNG)
 > 3. Provide products to render in component
 ![products service](./Documentation/Images/S1/Products_Service_Basic_Concept.PNG)
 > 4. Support `HttpClient` from app module
