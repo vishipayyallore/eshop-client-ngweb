@@ -88,7 +88,7 @@ Install-Module PowerShell-yaml -Force
 ### Client application in Angular (`5 minutes`)
 
 > 1. Discussion
-> 1. why angular? why not?
+> 1. Why Angular? Why not?
 
 ### How to start a project (`5 minutes`)
 
@@ -103,11 +103,11 @@ Install-Module PowerShell-yaml -Force
 
 ### How to add Configuration (`5 minutes`)
 
-> 1. Discuss using configuration variables
+> 1. Discuss using configuration variables and Indicate `apiHost` for products
 ![configuration screenshot](./Documentation/Images/S1/Configuration.PNG)
-> 2. Indicate `apiHost` for products
+> 2. Expose `process.env` and `angular's environment` inside the component
 ![show environment with changes to ts](./Documentation/Images/S1/Show_Environment_TS.PNG)
-> 3. Expose `process.env` and `angular's environment` inside the component
+> 3. Render `process.env` and `angular's environment` inside Html
 ![show environment with changes to html](./Documentation/Images/S1/Show_Environment_Html.PNG)
 > 4. Render `process.env` and `angular's environment` inside Browser
 ![show environment rendered in browser](./Documentation/Images/S1/Show_Environment_Page.PNG)
