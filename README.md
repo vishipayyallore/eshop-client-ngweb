@@ -133,21 +133,21 @@ Install-Module PowerShell-yaml -Force
 > 4. Setup lazy-loading of products module
 ![lazy-loaded products](./Documentation/Images/S1/products%20module%20changes.png)
 ![products child routes](./Documentation/Images/S1/products%20routing%20module.png)
-> 5. Demo Client
+> 5. Demo `Client Application` in Browser
 > ![products raw json demo](./Documentation/Images/S1/demo%20products.png)
 
-### Make products look more like products (10 minutes)
+### Make `products` look more like `products` (10 minutes)
 
-> 1. add product component
+> 1. Add product component
 ![create scaffolding with cli](./Documentation/Images/S1/create%20product%20with%20cli.png)
 ![product component](./Documentation/Images/S1/create%20product%20component.png)
 ![product template](./Documentation/Images/S1/create%20product%20template.png)
-> 1. add product styling
+> 2. Add `product` styling
 ![product styling](./Documentation/Images/S1/style%20product.png)
-> 1. add product component to products
+> 3. Add `product` component to products module
 ![add to module](./Documentation/Images/S1/add%20product%20to%20products%20module.png)
 ![add to template](./Documentation/Images/S1/add%20product%20component%20to%20products%20template.png)
-> 3. demo products
+> 4. Demo `products` page in Browser
 ![demo styled products](./Documentation/Images/S1/demo%20styled%20products.png)
 
 ### Discuss production build process (5 minutes)
