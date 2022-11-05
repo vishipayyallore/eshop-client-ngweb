@@ -21,7 +21,8 @@ Angular 14.x UI for eShop Client application
 
 ## Links to individual session(s) Documentation and its Videos
 
-> 1. Please refer [Session1.md](./Documentation/Sessions/Session1.md) and [Video](https://www.youtube.com/watch?v=wQ0Xf4pKZaQ) for more details.
+> 1. Please refer [**Session1**.md](./Documentation/Sessions/Session1.md) and [Video](https://www.youtube.com/watch?v=ckWZIZVDBjI) for more details.
+> 1. Please refer [**Session2**.md](./Documentation/Sessions/Session2.md) and [Video](https://www.youtube.com/watch?v=wQ0Xf4pKZaQ) for more details.
 
 ---
 
@@ -60,11 +61,11 @@ Angular 14.x UI for eShop Client application
 
 > 1. Discussion and Demo
 
-### eslint (`5 minutes`)
+### Typescript `eslint` File (`5 minutes`)
 
 > 1. Discussion and Demo
 
-### typescript `tsconfig` (`5 minutes`)
+### Typescript `tsconfig` File (`5 minutes`)
 
 > 1. Discussion and Demo
 
@@ -91,7 +92,7 @@ Angular 14.x UI for eShop Client application
 ## 7. What is next in `Session 13`? (`5 Minutes`) on `02-Dec-2022`
 
 > 1. Greetings/Introduction Reel (`5 Minutes`)
-> 1. To be done (`5 Minutes`)
+> 1. Introduction to Design System (`50 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 14`? (`5 Minutes`)
 
