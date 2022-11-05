@@ -30,16 +30,57 @@ Angular 14.x UI for eShop Client application
 ## What are we going to do today?
 
 > 1. Greetings/Introduction Reel (`5 Minutes`)
-> 1. Introduction of eShop Main GitHub Repository (`5 Minutes`)
-> 1. PowerShell/Shell Scripts in 'Main' Repository (`5 Minutes`)
-> 1. Deploy Infrastructure and Products Microservices from Main (`5 Minutes`)
-> 1. Introduction to the eShop Client Application Saga (`40 Minutes`)
+> 1. Address comments and dynamics of comments with live coding (`10 Minutes`)
+> 1. Summary of DOM and bootstrap (`5 Minutes`)
+> 1. Quality of life for developers (`10 Minutes`)
+>    - eslint (`5 minutes`)
+>    - typescript tsconfig (`5 minutes`)
+> 1. Separation of environment and configuration (`20 minutes`)
+>    - angular.json File (`5 Minutes`)
+>    - environment Folder (`5 Minutes`)
+>    - Config Folder (`10 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 13`? (`5 Minutes`)
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
 ## 1. Greetings/Introduction Reel (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+## 2. Address comments and dynamics of comments with live coding (`10 Minutes`)
+
+> 1. Discussion and Demo
+
+## 3. Summary of DOM and bootstrap (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+## 4. Quality of life for developers (`10 Minutes`)
+
+> 1. Discussion and Demo
+
+### eslint (`5 minutes`)
+
+> 1. Discussion and Demo
+
+### typescript `tsconfig` (`5 minutes`)
+
+> 1. Discussion and Demo
+
+## 5. Separation of environment and configuration (`20 minutes`)
+
+> 1. Discussion and Demo
+
+### angular.json File (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+### environment Folder (`5 Minutes`)
+
+> 1. Discussion and Demo
+
+### Config Folder (`10 Minutes`)
 
 > 1. Discussion and Demo
 
