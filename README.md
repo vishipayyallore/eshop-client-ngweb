@@ -52,6 +52,12 @@ Angular 14.x UI for eShop Client application
 ## 2. Address comments and dynamics of comments with live coding (`10 Minutes`)
 
 > 1. Discussion
+- dynamics of comments with live coding
+- white theme on visual studio code shouldn’t be allowed :-)
+- angular material
+- change detection strategy
+- ivy, you should explain JIT and AOT compilation
+- dependency injection
 
 ## 3. Summary of DOM and bootstrap (`5 Minutes`)
 
