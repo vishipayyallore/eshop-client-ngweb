@@ -131,7 +131,7 @@ Install-Module PowerShell-yaml -Force
 
 > 1. Discussion
 
-## 7. What is next in `Session 12`? (`5 Minutes`) on `18-Nov-2022`
+## 7. What is next in Session `12`? (`5 Minutes`) on `18-Nov-2022`
 
 > 1. Greetings/Introduction Reel (`5 Minutes`)
 > 1. Deep Dive into Configuring the Angular Project for Development (`50 Minutes`)
