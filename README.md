@@ -21,8 +21,11 @@ Angular 14.x UI for eShop Client application
 
 ## Links to individual session(s) Documentation and its Videos
 
+**Note:**: The links below are to the individual session(s) documentation and its videos.
+
+> 1. Please refer [**eshop-main**](https://github.com/vishipayyallore/eshop-main/blob/main/README.md) for the links to individual session(s) documentation and its videos for this entire series.
 > 1. Please refer [**Session1**.md](./Documentation/Sessions/Session1.md) and [Video](https://www.youtube.com/watch?v=ckWZIZVDBjI) for more details.
-> 1. Please refer [**Session2**.md](./Documentation/Sessions/Session2.md) and [Video](https://www.youtube.com/watch?v=wQ0Xf4pKZaQ) for more details.
+> 1. Please refer [**Session2**.md](./Documentation/Sessions/Session2.md) and [Video](https://www.youtube.com/watch?v=-F9xI4Xu_p8) for more details.
 
 ---
 
@@ -52,6 +55,7 @@ Angular 14.x UI for eShop Client application
 ## 2. Address comments and dynamics of comments with live coding (`10 Minutes`)
 
 > 1. Discussion
+>
 - dynamics of comments with live coding
 - white theme on visual studio code shouldn’t be allowed :-)
 - angular material
@@ -70,9 +74,11 @@ Angular 14.x UI for eShop Client application
 ### Typescript `eslint` File (`5 minutes`)
 
 Angular provides some eslint opinions we can install. To doo so, run this command:
+
 ```
 ng add @angular-eslint/schematics
 ```
+
 ![eslint](./Documentation/Images/session%2012/eslint.png)
 
 observe/configure your eslint
