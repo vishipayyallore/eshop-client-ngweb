@@ -6,11 +6,11 @@
 > 1. Address comments and dynamics of comments with live coding (`10 Minutes`)
 > 1. Summary of DOM and bootstrap (`5 Minutes`)
 > 1. Quality of life for developers (`10 Minutes`)
->    - eslint (`5 minutes`)
->    - typescript tsconfig (`5 minutes`)
+>    - Eslint (`5 minutes`)
+>    - TypeCcript tsconfig (`5 minutes`)
 > 1. Separation of environment and configuration (`20 minutes`)
->    - angular.json File (`5 Minutes`)
->    - environment Folder (`5 Minutes`)
+>    - Angular.json File (`5 Minutes`)
+>    - Environment Folder (`5 Minutes`)
 >    - Config Folder (`10 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 13`? (`5 Minutes`)
@@ -23,12 +23,12 @@
 
 > 1. Discussion and demo
 >
-- dynamics of comments with live coding
-- white theme on visual studio code shouldn’t be allowed :-)
-- angular material
-- change detection strategy
-- ivy, you should explain JIT and AOT compilation
-- dependency injection
+- Dynamics of comments with live coding
+- White theme on visual studio code shouldn’t be allowed :-)
+- Angular material
+- Change Detection strategy
+- Ivy, you should explain JIT and AOT compilation
+- Dependency Injection (DI)
 
 ## 3. Summary of DOM and bootstrap (`5 Minutes`)
 
@@ -46,18 +46,18 @@ Angular provides some eslint opinions we can install. To doo so, run this comman
 ng add @angular-eslint/schematics
 ```
 
-![eslint](./Documentation/Images/session%2012/eslint.png)
+![eslint](../Images/session%2012/eslint.png)
 
 observe/configure your eslint
-![eslint](./Documentation/Images/session%2012/eslintrc.png)
+![eslint](../Images/session%2012/eslintrc.png)
 
 use eslint extension (vs code users)
-![eslint](./Documentation/Images/session%2012/eslint%20extension.png)
+![eslint](../Images/session%2012/eslint%20extension.png)
 
 ### Typescript `tsconfig` File (`5 minutes`)
 
 we can configure typescript with handy things like paths, output, preferred rules. (angular build preferences can also be added here)
-![typescript](./Documentation/Images/session%2012/tsconfig.png)
+![typescript](../Images/session%2012/tsconfig.png)
 
 ## 5. Separation of environment and configuration (`20 minutes`)
 
@@ -68,17 +68,17 @@ we can configure typescript with handy things like paths, output, preferred rule
 you can provide different configurations in angular.json. This can be used to change local application settings such as urls.
 
 Here, we will create an environment that will prevent calling external resources
-![angular.json](./Documentation/Images/session%2012/angular.json.png)
+![angular.json](../Images/session%2012/angular.json.png)
 
 ### environment Folder (`5 Minutes`)
 
 now let's revisit the environment folder to separate configuration from environment specification.
 
-![dev environment](./Documentation/Images/session%2012/dev%20environment.png)
-![prod environment](./Documentation/Images/session%2012/prod%20environment.png)
+![dev environment](../Images/session%2012/dev%20environment.png)
+![prod environment](../Images/session%2012/prod%20environment.png)
 
 we need to create the one we specified in angular.jsoon build section
-![headless environment](./Documentation/Images/session%2012/local%20development%20environment.png)
+![headless environment](../Images/session%2012/local%20development%20environment.png)
 
 > 1. Discussion
 
@@ -86,17 +86,17 @@ we need to create the one we specified in angular.jsoon build section
 
 now we can implement our application settings in config.
 
-![prod config](./Documentation/Images/session%2012/prod%20config.png)
+![prod config](../Images/session%2012/prod%20config.png)
 
 we will import these into a common config file and just reference that export throughout the project
-![exported config](./Documentation/Images/session%2012/exported%20config.png)
+![exported config](../Images/session%2012/exported%20config.png)
 
 here are the other two environment configurations:
-![prod config](./Documentation/Images/session%2012/dev%20config.png)
-![prod config](./Documentation/Images/session%2012/local%20development%20config.png)
+![prod config](../Images/session%2012/dev%20config.png)
+![prod config](../Images/session%2012/local%20development%20config.png)
 
 now we can consume that in the code, and the config will always be correct for the environment
-![use of exported config](./Documentation/Images/session%2012/use%20of%20exported%20config.png)
+![use of exported config](../Images/session%2012/use%20of%20exported%20config.png)
 
 > 1. Discussion
 

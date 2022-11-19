@@ -37,11 +37,11 @@ Angular 14.x UI for eShop Client application
 > 1. Address comments and dynamics of comments with live coding (`10 Minutes`)
 > 1. Summary of DOM and bootstrap (`5 Minutes`)
 > 1. Quality of life for developers (`10 Minutes`)
->    - eslint (`5 minutes`)
->    - typescript tsconfig (`5 minutes`)
+>    - Eslint (`5 minutes`)
+>    - TypeCcript tsconfig (`5 minutes`)
 > 1. Separation of environment and configuration (`20 minutes`)
->    - angular.json File (`5 Minutes`)
->    - environment Folder (`5 Minutes`)
+>    - Angular.json File (`5 Minutes`)
+>    - Environment Folder (`5 Minutes`)
 >    - Config Folder (`10 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in `Session 13`? (`5 Minutes`)
@@ -56,12 +56,12 @@ Angular 14.x UI for eShop Client application
 
 > 1. Discussion and demo
 >
-- dynamics of comments with live coding
-- white theme on visual studio code shouldn’t be allowed :-)
-- angular material
-- change detection strategy
-- ivy, you should explain JIT and AOT compilation
-- dependency injection
+- Dynamics of comments with live coding
+- White theme on visual studio code shouldn’t be allowed :-)
+- Angular material
+- Change Detection strategy
+- Ivy, you should explain JIT and AOT compilation
+- Dependency Injection (DI)
 
 ## 3. Summary of DOM and bootstrap (`5 Minutes`)
 
@@ -75,7 +75,7 @@ Angular 14.x UI for eShop Client application
 
 Angular provides some eslint opinions we can install. To doo so, run this command:
 
-```
+```AngularCLI
 ng add @angular-eslint/schematics
 ```
 
