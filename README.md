@@ -73,7 +73,7 @@ Angular 14.x UI for eShop Client application
 
 ### Typescript `eslint` File (`5 minutes`)
 
-Angular provides some eslint opinions we can install. To doo so, run this command:
+Angular provides some eslint opinions we can install. To do so, run this command:
 
 ```AngularCLI
 ng add @angular-eslint/schematics
