@@ -36,7 +36,7 @@ Angular 14.x UI for eShop Client application
 
 > 1. Greetings/Introduction Reel (`5 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-> 1. What is next in `Session 13`? (`5 Minutes`)
+> 1. What is next in Session `14`? (`5 Minutes`)
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
@@ -48,12 +48,12 @@ Angular 14.x UI for eShop Client application
 
 > 1. Discussion
 
-## 7. What is next in `Session 14`? (`5 Minutes`) on `16-Dec-2022`
+## 7. What is next in Session `14`? (`5 Minutes`) on `16-Dec-2022`
 
 > 1. Greetings/Introduction Reel (`5 Minutes`)
 > 1. Introduction to Design System (`50 Minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-> 1. What is next in `Session 15`? (`5 Minutes`)
+> 1. What is next in Session `15`? (`5 Minutes`)
 
 ---
 
