@@ -54,7 +54,7 @@ Angular 14.x UI for eShop Client application
 
 ## 2. Address comments and dynamics of comments with live coding (`10 Minutes`)
 
-> 1. Discussion
+> 1. Discussion and demo
 >
 - dynamics of comments with live coding
 - white theme on visual studio code shouldn’t be allowed :-)
