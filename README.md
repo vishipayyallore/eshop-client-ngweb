@@ -35,6 +35,16 @@ Angular 14.x UI for eShop Client application
 ## What are we going to do today?
 
 > 1. Greetings/Introduction Reel (`5 Minutes`)
+> 1. Wrap up client configurations (`25 minutes`)
+>    - Jest (`15 minutes`)
+>    - Husky (`10 minutes`)
+> 1. Separate design concerns (`20 minutes`)
+>    - Just show how to set up a project library (`10 minutes`)
+>    - Introduction to build process (`10 minutes`)
+>       - Overview of build process considerations: ivy, jit/aot (`5 minutes`)
+>       - Package exports (`3 minutes`)
+>       - Dist folder (`2 minutes`)
+> 1. Introduce `Design System` (`5 minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in Session `14`? (`5 Minutes`)
 
@@ -44,11 +54,51 @@ Angular 14.x UI for eShop Client application
 
 > 1. Discussion
 
-## 6. Review/Q & A/Panel Discussion (`5 Minutes`)
+## 2. Wrap up client configurations (`25 minutes`)
+
+> 1. Discussion and Demo
+
+### Jest (`15 minutes`)
+
+> 1. Discussion and Demo
+
+### Husky (`10 minutes`)
+
+> 1. Discussion and Demo
+
+## 3. Separate design concerns (`20 minutes`)
+
+> 1. Discussion and Demo
+
+### Just show how to set up a project library (`10 minutes`)
+
+> 1. Discussion and Demo
+
+### Introduction to build process (`10 minutes`)
+
+> 1. Discussion and Demo
+
+#### Overview of build process considerations: ivy, jit/aot (`5 minutes`)
+
+> 1. Discussion and Demo
+
+#### Package exports (`3 minutes`)
+
+> 1. Discussion and Demo
+
+#### Dist folder (`2 minutes`)
+
+> 1. Discussion and Demo
+
+## 4. Introduce `Design System` (`5 minutes`)
+
+> 1. Discussion on `Design System`
+
+## 5. Review/Q & A/Panel Discussion (`5 Minutes`)
 
 > 1. Discussion
 
-## 7. What is next in Session `14`? (`5 Minutes`) on `16-Dec-2022`
+## 6. What is next in Session `14`? (`5 Minutes`) on `16-Dec-2022`
 
 > 1. Greetings/Introduction Reel (`5 Minutes`)
 > 1. Introduction to Design System (`50 Minutes`)

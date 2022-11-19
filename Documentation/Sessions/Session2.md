@@ -110,6 +110,15 @@ Now we can consume that in the code, and the config will always be correct for t
 ## 7. What is next in Session `13`? (`5 Minutes`) on `02-Dec-2022`
 
 > 1. Greetings/Introduction Reel (`5 Minutes`)
-> 1. Introduction to Design System (`50 Minutes`)
+> 1. Wrap up client configurations (`25 minutes`)
+>    - Jest (`15 minutes`)
+>    - Husky (`10 minutes`)
+> 1. Separate design concerns (`20 minutes`)
+>    - Just show how to set up a project library (`10 minutes`)
+>    - Introduction to build process (`10 minutes`)
+>       - Overview of build process considerations: ivy, jit/aot (`5 minutes`)
+>       - Package exports (`3 minutes`)
+>       - Dist folder (`2 minutes`)
+> 1. Introduce `Design System` (`5 minutes`)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
-> 1. What is next in `Session 14`? (`5 Minutes`)
+> 1. What is next in Session `14`? (`5 Minutes`)
