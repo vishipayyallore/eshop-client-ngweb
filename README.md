@@ -27,7 +27,7 @@ Angular 14.x UI for eShop Client application
 > 1. Please refer [Session**1**.md](./Documentation/Sessions/Session1.md) and [Video](https://www.youtube.com/watch?v=ckWZIZVDBjI) for more details.
 > 1. Please refer [Session**2**.md](./Documentation/Sessions/Session2.md) and [Video](https://www.youtube.com/watch?v=-F9xI4Xu_p8) for more details.
 > 1. Please refer [Session**3**.md](./Documentation/Sessions/Session3.md) and [Video](https://www.youtube.com/watch?v=XKScxbJQo04) for more details.
-> 1. Please refer [Session**4**.md](./Documentation/Sessions/Session3.md) and [Video](https://www.youtube.com/watch?v=il6wq6zHfMk) for more details.
+> 1. Please refer [Session**4**.md](./Documentation/Sessions/Session4.md) and [Video](https://www.youtube.com/watch?v=il6wq6zHfMk) for more details.
 
 ---
 
@@ -59,7 +59,7 @@ Angular 14.x UI for eShop Client application
 
 > 1. Discussion
 
-## 6. What is next in Session `14`? (`5 Minutes`) on `16-Dec-2022`
+## 6. What is next in Session `15`? (`5 Minutes`) on `03-Feb-2023`
 
 > 1. Greetings/Introduction Reel (`5 Minutes`)
 > 1. Introduction to Design System (`50 Minutes`)
