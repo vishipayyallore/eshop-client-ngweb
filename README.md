@@ -36,22 +36,77 @@ Angular 14.x UI for eShop Client application
 ## What are we going to do today?
 
 > 1. Greetings/Introduction Reel (`5 Minutes`)
-> 1. Wrap up client configurations (`25 minutes`)
->    - Jest (`15 minutes`)
->    - Husky (`10 minutes`)
-> 1. Separate design concerns (`20 minutes`)
->    - Just show how to set up a project library (`10 minutes`)
->    - Introduction to build process (`10 minutes`)
->       - Overview of build process considerations: ivy, jit/aot (`5 minutes`)
->       - Package exports (`3 minutes`)
->       - Dist folder (`2 minutes`)
-> 1. Introduce `Design System` (`5 minutes`)
+> 1. Wrap up Design System (`20 minutes`)
+>    - Introduce design system concept:  
+>      - Compare/contrast with micro-frontend (`10 minutes`)
+>      - Show styles, header, (profile foreshadowing?) (`10 minutes`)
+> 1. Create the package in github (`15 minutes`)
+>    - Intro to npm artifact, artifacts on github (`5 minutes`)
+>    - Configure github action to create artifact (`5 minutes`)
+>    - Demo artifact creation (`5 minutes`)
+> 1. Consume package in client (`10 minutes`)
+>    - Configure for the developer (5 minutes)
+>      - Add .npmrc in repo
+>      - Add ~/.npmrc
+>    - Demo (5 minutes)
 > 1. Review/Q & A/Panel Discussion (`5 Minutes`)
 > 1. What is next in Session `14`? (`5 Minutes`)
 
 ![Faster Your Seat Belt |150x150](./Documentation/Images/SeatBelt.PNG)
 
 ## 1. Greetings/Introduction Reel (`5 Minutes`)
+
+> 1. Discussion
+
+## 2. Wrap up Design System (`20 minutes`)
+
+> 1. Discussion and Demo
+
+### 2.1. Introduce design system concept  
+
+> 1. Discussion and Demo
+
+#### Compare/contrast with micro-frontend (`10 minutes`)
+
+> 1. Discussion and Demo
+
+#### Show styles, header, (profile foreshadowing?) (`10 minutes`)
+
+> 1. Discussion and Demo
+
+## 3. Create the package in github (`15 minutes`)
+
+> 1. Discussion
+
+### Intro to npm artifact, artifacts on github (`5 minutes`)
+
+> 1. Discussion
+
+### Configure github action to create artifact (`5 minutes`)
+
+> 1. Discussion
+
+### Demo artifact creation (`5 minutes`)
+
+> 1. Discussion
+
+## 4. Consume package in client (`10 minutes`)
+
+> 1. Discussion
+
+### 4.1. Configure for the developer (5 minutes)
+
+> 1. Discussion
+
+#### Add .npmrc in repo
+
+> 1. Discussion
+
+#### Add ~/.npmrc
+
+> 1. Discussion
+
+### 4.2. Demo (5 minutes)
 
 > 1. Discussion
 
