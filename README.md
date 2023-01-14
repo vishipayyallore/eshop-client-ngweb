@@ -78,17 +78,97 @@ Angular 14.x UI for eShop Client application
 
 > 1. Discussion
 
+**References:**
+
+> 1. [https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry)
+
 ### Intro to npm artifact, artifacts on github (`5 minutes`)
 
 > 1. Discussion
+
+![Packages and Artifacts |150x150](./Documentation/Images/Session14/Packages_artifacts.PNG)
+
+#### Sample package.json
+
+```json
+{
+    name: "@vishipayyallore/sayhello",
+    version: "1.0.6",
+    description: "This is Simple npm package for testing",
+    main: "index.js",
+    publishConfig: {
+        registry: "https://npm.pkg.github.com"
+    }
+}
+```
+
+#### Generate the GitHub Personal Access Token
+
+**References:**
+
+> 1. [https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+![GitHub PAT |150x150](./Documentation/Images/Session14/GitHub_PAT.PNG)
+
+#### Update `~/.npmrc` file
+
+```.npmrc
+@vishipayyallore:registry=https://npm.pkg.github.com/
+always-auth=true
+//npm.pkg.github.com/:_authToken=Your-Personal-Access-Token
+```
+
+#### Publishing the package from local machine
+
+```npm
+npm publish
+```
+
+![NPM publish CLI |150x150](./Documentation/Images/Session14/NPM_Publish_CLI.PNG)
 
 ### Configure github action to create artifact (`5 minutes`)
 
 > 1. Discussion
 
+```yml
+name: Publish hello-world NPM Package
+
+on:
+  push:
+    branches: [ main ]
+  release:
+    types: [created]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  publish-gpr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com/
+      - run: npm install
+        working-directory: ./src
+      - run: npm publish 
+        working-directory: ./src
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+```
+
+![GitHub Actions Workflow |150x150](./Documentation/Images/Session14/GitHubActions_ForNPMPackage.PNG)
+
 ### Demo artifact creation (`5 minutes`)
 
 > 1. Discussion
+
+![Packages in GitHub |150x150](./Documentation/Images/Session14/Package_In_GitHub.PNG)
 
 ## 4. Consume package in client (`10 minutes`)
 
