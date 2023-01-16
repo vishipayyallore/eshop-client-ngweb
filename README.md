@@ -162,6 +162,12 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
+### Permission for `private packages`
+
+![Permission for private packages |150x150](./Documentation/Images/Session14/Package_Permission.PNG)
+
+### GitHub Actions Workflow
+
 ![GitHub Actions Workflow |150x150](./Documentation/Images/Session14/GitHubActions_ForNPMPackage.PNG)
 
 ### Demo artifact creation (`5 minutes`)
