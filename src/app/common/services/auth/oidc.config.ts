@@ -6,7 +6,7 @@
  */
 export const factoryOIDCConfiguration = ({
   authority, signInEndpoint, signOutEndpoint, clientId, scope, responseType
-}: {[key: string]: string}) => Object.assign({}, {
+}: {[key: string]: string} = {}) => Object.assign({}, {
   authority,
   redirectUrl: window.location.origin + signInEndpoint,
   postLoginRoute: '/profile',
