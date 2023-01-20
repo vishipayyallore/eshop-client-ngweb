@@ -74,7 +74,6 @@ We will not be going into very much detail with the actual designs in our design
 
 ![icon sample](./Documentation/Images/session14/icon.png)
 
-
 The AI did not design a proper design system for us, rather it designed only an icon for us to use. From that we fleshed out fonts, colors, light and dark mode, etc. 
 
 ![light-and-dark-modes](./Documentation/Images/session14/style-sample.png)
